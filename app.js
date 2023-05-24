@@ -4,5 +4,8 @@ function rqListener(req, res) {
 
 }
 // req = contain data
-// res = sen a response
-http.createServer();
+// res = help for send a response
+
+
+http.createServer(rqListener);
+// (rqListerner)= passing function
