@@ -10,6 +10,8 @@ const http = require('http');
 // http.createServer(rqListener);
 // // (rqListerner)= passing function
 
-http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     console.log(req);
 });
+
+server.listen(3000);
