@@ -18,9 +18,13 @@ const server = http.createServer((req, res) => {
       console.log(chunk);
       body.push(chunk);
     });
-    
+    // create eventlistener with name 'end' and receive all chunks to create body & convert to string
+    req.on('end', () => {
+      const parsedBody = Buffer.concat(body).toString();
+      const message = parsedBody.split('=')[1];
     // all user input requests are created in a message.file and reside in that file
-    fs.writeFileSync('message.txt', message);
+      fs.writeFileSync('message.txt', message);
+    });
     res.statusCode = 302;
     res.setHeader('Location', '/');
     return res.end();
