@@ -40,6 +40,9 @@ const requestHandler = (req, res) => {
   res.end();
 };
 
+exports.handler = requestHandler;
+exports.someText = 'Some hard coded text';
+
 // module.exports = requestHandler;
 // export routes.js
 
@@ -53,5 +56,3 @@ const requestHandler = (req, res) => {
 // module.exports.handler = requestHandler;
 // module.exports.someText = 'Some text';
 
-exports.handler = requestHandler;
-exports.someText = 'Some hard coded text';
