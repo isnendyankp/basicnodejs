@@ -11,6 +11,7 @@ const requestHandler = (req, res) => {
     res.write('</html>');
     return res.end();
     }
+    
     if (url === '/message' && method === 'POST') {
         const body = [];
         // create event listener with name 'data' and push all chunks to create body
