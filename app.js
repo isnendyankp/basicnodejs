@@ -1,6 +1,6 @@
 // npm start 
-
-const http = require('http');
+// s5-62: shorthand to set up the server so the constant no need it that syntax
+// const http = require('http');
 
 const express = require('express');
 
@@ -16,6 +16,9 @@ app.use((req, res, next) => {
     res.send('<h1>Hello from Express!</h1>');
 });
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-server.listen(3000);
+// server.listen(3000);
+
+// s5-62: shorthand to set up the server
+app.listen(3000);
