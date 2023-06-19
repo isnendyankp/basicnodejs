@@ -16,7 +16,8 @@ app.use('/add-product', (req, res, next) => {
 
 // cr8 route or middleware that handles request to product from form
 app.post('/product', (req, res, next) => {
-    
+    console.log(req.body);
+    res.redirect('/');
 });
 
 app.use('/', (req, res, next) => {
