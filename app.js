@@ -5,7 +5,7 @@ const app = express();
 
 // install npm install --save body-parser for parsing
 // URL encoding is the process of converting non-alphanumeric characters into a computer-understandable representation of a URL.
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: false}));
 
 // s5-63: Setup middleware for different routes
 app.use('/', (req, res, next) => {
