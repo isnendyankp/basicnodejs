@@ -8,20 +8,6 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-// s5-63:  add product for different routes
-app.use('/add-product', (req, res, next) => {
-  console.log('In another middleware!');
-  res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>');
-});
-
-// cr8 route or middleware that handles request to product from form
-// In Express.js, app.post() is a method used to handle HTTP POST requests. It is a key function in defining middleware in your application.
-app.post('/product', (req, res, next) => {
-    console.log(req.body);
-    res.redirect('/');
-// Middleware that uses res.redirect can be used to redirect clients from one URL to another.
-});
-
 app.use('/', (req, res, next) => {
   console.log('In another middleware!');
   res.send('<h1>Hello from Express!</h1>');
