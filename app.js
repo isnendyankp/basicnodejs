@@ -10,6 +10,8 @@ const adminRoutes = require('./routes/admin');
 // URL encoding is the process of converting non-alphanumeric characters into a computer-understandable representation of a URL.
 app.use(bodyParser.urlencoded({extended: false}));
 
+// call Routes
+app.use(adminRoutes);
 
 app.use('/', (req, res, next) => {
   console.log('In another middleware!');
