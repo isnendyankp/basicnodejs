@@ -7,11 +7,6 @@ const app = express();
 // URL encoding is the process of converting non-alphanumeric characters into a computer-understandable representation of a URL.
 app.use(bodyParser.urlencoded({extended: false}));
 
-// s5-63: Setup middleware for different routes
-app.use('/', (req, res, next) => {
-    console.log('This always runs!');
-    next();
-});
 
 // s5-63:  add product for different routes
 app.use('/add-product', (req, res, next) => {
