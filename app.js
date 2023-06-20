@@ -20,6 +20,7 @@ app.use('/add-product', (req, res, next) => {
 });
 
 // cr8 route or middleware that handles request to product from form
+// In Express.js, app.post() is a method used to handle HTTP POST requests. It is a key function in defining middleware in your application.
 app.post('/product', (req, res, next) => {
     console.log(req.body);
     res.redirect('/');
