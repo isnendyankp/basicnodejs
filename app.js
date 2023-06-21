@@ -13,8 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // call Routes
 app.use(adminRoutes);
-
-
+app.use(shopRoutes);
 
 // s5-62: shorthand to set up the server
 app.listen(3000);
