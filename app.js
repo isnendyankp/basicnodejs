@@ -15,5 +15,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(adminRoutes);
 app.use(shopRoutes);
 
+// adding a 404 Error page
+app.use((req, res, next) => {
+    res.status(404).send('<h1>Page not found</h1>');
+});
+
 // s5-62: shorthand to set up the server
 app.listen(3000);
