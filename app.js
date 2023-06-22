@@ -12,7 +12,7 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({extended: false}));
 
 // call Routes
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 // adding a 404 Error page
