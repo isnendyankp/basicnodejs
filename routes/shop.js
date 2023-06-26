@@ -1,3 +1,6 @@
+// import path for res.sendFile
+const path = require('path');
+
 // import express
 const express = require('express');
 
