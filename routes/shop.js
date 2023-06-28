@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
   // res.sendFile() to send a file as a response to an HTTP request.
   // path.join() is a method commonly used in Node.js to join multiple path segments into a single path. 
   // build path with _dirname > go up on lvl with ../ > then go to views folder > target shop.html
-  res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+  res.sendFile(path.join(__dirname, '..', 'views', 'shop.html'));
 });
 
 // export the router
