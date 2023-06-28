@@ -9,7 +9,8 @@ const router = express.Router();
 // /admin/add-product => GEt
 // Cr8 filter path for admin to add product
 router.get('/add-product', (req, res, next) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));
+  // access rootDir for easy navigation
+  res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 });
 
 // /admin/add-product => POST
