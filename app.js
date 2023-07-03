@@ -12,7 +12,8 @@ const shopRoutes = require('./routes/shop');
 // install npm install --save body-parser for parsing
 // URL encoding is the process of converting non-alphanumeric characters into a computer-understandable representation of a URL.
 app.use(bodyParser.urlencoded({extended: false}));
-
+// Serving File Staticly for split styling css
+app.use(express.static(path.join(__dirname, 'public')));
 // call Routes
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
