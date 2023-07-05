@@ -6,6 +6,8 @@ const rootDir = require('../util/path');
 
 const router = express.Router();
 
+const products = [];
+
 // /admin/add-product => GEt
 // Cr8 filter path for admin to add product
 router.get('/add-product', (req, res, next) => {
@@ -19,4 +21,5 @@ router.post('/product', (req, res, next) => {
   res.redirect('/');
 });
 
-module.exports = router;
+exports.routes = router;
+exports.products = products;
