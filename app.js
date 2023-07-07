@@ -12,6 +12,9 @@ app.set();
 // set the default view engine to Pug.
 // Express will use Pug as the primary view engine for rendering the application's views.
 app.set('view engine', 'pug');
+// function in Express.js is used to specify the directory where the view templates are located.
+// app.set('views = functiion make default folder view', 'directory folder view');
+app.set('views', 'views');
 
 // import all routes folder
 const adminData = require('./routes/admin');
