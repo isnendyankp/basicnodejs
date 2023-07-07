@@ -9,6 +9,9 @@ const app = express();
 // The app.set() used to set configuration options for the Express application.
 // have two arguments: settingName, settingValue
 app.set();
+// set the default view engine to Pug.
+// Express will use Pug as the primary view engine for rendering the application's views.
+app.set('view engine', 'pug');
 
 // import all routes folder
 const adminData = require('./routes/admin');
