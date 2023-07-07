@@ -16,12 +16,8 @@ const router = express.Router();
 // move code for shop route & change app.use to router.get
 // The function router.get() in middleware is used to handle incoming GET HTTP requests in Express.js.
 router.get('/', (req, res, next) => {
-  // check with empy array from adminData
-  console.log('shop.js', adminData.products);
-  // res.sendFile() to send a file as a response to an HTTP request.
-  // path.join() is a method commonly used in Node.js to join multiple path segments into a single path. 
-  // build path with _dirname > go up on lvl with ../ > then go to views folder > target shop.html
-  res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+  // rendering shop.pug from views folder
+  res.render('shop');
 });
 
 // export the router
