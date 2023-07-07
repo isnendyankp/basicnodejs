@@ -5,6 +5,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// set a global configuration value
+// The app.set() used to set configuration options for the Express application.
+// have two arguments: settingName, settingValue
+app.set();
+
 // import all routes folder
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
