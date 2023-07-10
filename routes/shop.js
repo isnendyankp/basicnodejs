@@ -16,6 +16,7 @@ const router = express.Router();
 // move code for shop route & change app.use to router.get
 // The function router.get() in middleware is used to handle incoming GET HTTP requests in Express.js.
 router.get('/', (req, res, next) => {
+  const products = adminData.products;
   // rendering shop.pug from views folder
   res.render('shop');
 });
