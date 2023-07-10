@@ -19,7 +19,8 @@ router.get('/', (req, res, next) => {
   const products = adminData.products;
   // rendering shop.pug from views folder
   // render template 'shop'  dengan objek yang berisi data {prods: products}
-  res.render('shop', {prods: products});
+  // pass in with other field docTitle: 'Shop'
+  res.render('shop', {prods: products, docTitle: 'Shop'});
 });
 
 // export the router
