@@ -18,7 +18,8 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   const products = adminData.products;
   // rendering shop.pug from views folder
-  res.render('shop');
+  // render template 'shop'  dengan objek yang berisi data {prods: products}
+  res.render('shop', {prods: products});
 });
 
 // export the router
