@@ -16,7 +16,7 @@ router.get('/add-product', (req, res, next) => {
 });
 
 // /admin/add-product => POST
-router.post('/product', (req, res, next) => {
+router.post('/add-product', (req, res, next) => {
   // push new element into this array, a new object
   products.push({ title: req.body.title });
   res.redirect('/');
