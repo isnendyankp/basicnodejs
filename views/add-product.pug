@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Add Product
+        title #{pageTitle} 
     body
         header.main-header
             nav.main-header__nav
@@ -18,5 +18,7 @@ html(lang="en")
                 .form-control
                     label(for="title") Title
                     input(type="text", name="title")#title
-                    
+
                 button.btn(type="submit") Add Product
+
+//-  add render dynamic content: title #{pageTitle} 
