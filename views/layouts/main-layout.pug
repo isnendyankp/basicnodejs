@@ -6,15 +6,16 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Page
         link(rel="stylesheet", href="/css/main.css")
+        block styles
+    body   
+        header.main-header
+            nav.main-header__nav
+                ul.main-header__item-list
+                    li.main-header__item
+                        a(href="/", class=(path === '/' ? 'active' : '')) Shop
+                    li.main-header__item
+                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
 
-        body   
-            header.main-header
-                nav.main-header__nav
-                    ul.main-header__item-list
-                        li.main-header__item
-                            a(href="/", class=(path === '/' ? 'active' : '')) Shop
-                        li.main-header__item
-                            a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
 
 
-
+//-  with adding block styles, we able to add mode styles from inside other files here
