@@ -7,15 +7,17 @@ html(lang="en")
         title Page
         link(rel="stylesheet", href="/css/main.css")
         block styles
-    body   
+    body
         header.main-header
             nav.main-header__nav
                 ul.main-header__item-list
                     li.main-header__item
-                        a(href="/", class=(path === '/' ? 'active' : '')) Shop
+                        a(href="/") Shop
                     li.main-header__item
-                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
+                        a.(href="/admin/add-product") Add Product
+        block content
 
 
 
 //-  with adding block styles, we able to add mode styles from inside other files here
+//-  adding block content
