@@ -31,7 +31,8 @@ app.use(shopRoutes);
 
 // adding a 404 Error page
 app.use((req, res, next) => {
-    res.status(404).render('404');
+    //  passing pageTitle: 'Page NotFound'
+    res.status(404).render('404', {pageTitle: 'Page Not Found'});
 });
 
 // s5-62: shorthand to set up the server
