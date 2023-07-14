@@ -11,9 +11,6 @@ const products = [];
 // /admin/add-product => GEt
 // Cr8 filter path for admin to add product
 router.get('/add-product', (req, res, next) => {
-  // access rootDir for easy navigation
-  // res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
-
   // access render template from main-layout.pug
   // add path for access render
   res.render('add-product', { pageTitle: 'Add Product', path: '/admin/add-product' });
