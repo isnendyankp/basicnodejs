@@ -20,7 +20,8 @@ router.get('/', (req, res, next) => {
   // rendering shop.pug from views folder
   // render template 'shop'  dengan objek yang berisi data {prods: products}
   // pass in with other field docTitle: 'Shop'
-  res.render('shop', {prods: products, docTitle: 'Shop'});
+  // add pass additional key path
+  res.render('shop', {prods: products, docTitle: 'Shop', path: '/'});
 });
 
 // export the router
