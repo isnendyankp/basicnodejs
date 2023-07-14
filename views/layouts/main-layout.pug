@@ -12,7 +12,7 @@ html(lang="en")
             nav.main-header__nav
                 ul.main-header__item-list
                     li.main-header__item
-                        a(href="/") Shop
+                        a(href="/", class=(path === '/' ? 'active' : '')) Shop
                     li.main-header__item
                         a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
         block content
@@ -26,3 +26,5 @@ html(lang="en")
 
 //- definition : a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product:
 //- add check if path equal value ('/admin/add-product') then render active as class here otherwise an empty string
+
+//- add check path for passing path from shop.js / matching path shop at shop.js with main-layout.pug
