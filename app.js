@@ -6,15 +6,10 @@ const expressHbs = require('express-handlebars');
 
 const app = express();
 
-// set a global configuration value
-// The app.set() used to set configuration options for the Express application.
-// have two arguments: settingName, settingValue
-app.set();
-// set the default view engine to Pug.
-// Express will use Pug as the primary view engine for rendering the application's views.
+
+// app.set();
+app.engine();
 app.set('view engine', 'pug');
-// function in Express.js is used to specify the directory where the view templates are located.
-// app.set('views = functiion make default folder view', 'directory folder view');
 app.set('views', 'views');
 
 // import all routes folder
@@ -38,3 +33,16 @@ app.use((req, res, next) => {
 
 // s5-62: shorthand to set up the server
 app.listen(3000);
+
+
+// Description:
+// - The app.set() used to set configuration options for the Express application.
+// -- have two arguments: settingName, settingValue
+// - app.set('view engine', 'pug');
+// -- set the default view engine to Pug.
+// -- Express will use Pug as the primary view engine for rendering the application's views.
+// - app.set('views', 'views');
+// -- function in Express.js is used to specify the directory where the view templates are located.
+// -- app.set('views = functiion make default folder view', 'directory folder view');
+// - app.engine(); cr8 function with engine method for using express js.
+// -- need two parameter : name engine, function rendering will calling with express.js
