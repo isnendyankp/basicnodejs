@@ -8,7 +8,7 @@ const app = express();
 
 
 // app.set();
-app.engine();
+app.engine('handlebars', expressHbs());
 app.set('view engine', 'pug');
 app.set('views', 'views');
 
@@ -46,3 +46,4 @@ app.listen(3000);
 // -- app.set('views = functiion make default folder view', 'directory folder view');
 // - app.engine(); cr8 function with engine method for using express js.
 // -- need two parameter : name engine, function rendering will calling with express.js
+// -- // - app.engine('handlebars', expressHbs());  handlebars: name, expressHbs(); function rendering
