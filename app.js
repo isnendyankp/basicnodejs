@@ -8,8 +8,8 @@ const app = express();
 
 
 // app.set();
-app.engine('handlebars', expressHbs());
-app.set('view engine', 'handlebars');
+app.engine('hbs', expressHbs());
+app.set('view engine', 'hbs');
 app.set('views', 'views');
 
 // import all routes folder
