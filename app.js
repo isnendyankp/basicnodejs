@@ -9,7 +9,7 @@ const app = express();
 
 // app.set();
 app.engine('handlebars', expressHbs());
-app.set('view engine', 'pug');
+app.set('view engine', 'handlebars');
 app.set('views', 'views');
 
 // import all routes folder
@@ -47,3 +47,4 @@ app.listen(3000);
 // - app.engine(); cr8 function with engine method for using express js.
 // -- need two parameter : name engine, function rendering will calling with express.js
 // -- // - app.engine('handlebars', expressHbs());  handlebars: name, expressHbs(); function rendering
+// - app.set('view engine', 'handlebars'); switch view engine to handlebars
