@@ -1,25 +1,29 @@
-// import path for res.sendFile
+// 1
 const path = require('path');
-
-// import express
+// 2
 const express = require('express');
-
-// import util-path & cr8 rootDir for easy access navigation sendfile
+// 3
 const rootDir = require('../util/path');
-
-// access to the product with import adminData
+// 4
 const adminData = require('./admin');
-
-// cr8 router object by calling express.router as a function
+// 5
 const router = express.Router();
-
-// move code for shop route & change app.use to router.get
-// The function router.get() in middleware is used to handle incoming GET HTTP requests in Express.js.
+// 6
 router.get('/', (req, res, next) => {
   const products = adminData.products;
-  // rendering template shop with object contains data {prods: products} & pass in with additional key path: path: '/'
-  res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'});
+  res.render('shop', {prods: products, pageTitle: 'Shop', path: '/', hasProducts: products.length > 0,});
 });
 
-// export the router
+// 7
 module.exports = router;
+
+// progress:
+// 1. import path for res.sendFile
+// 2. import express
+// 3. import util-path & cr8 rootDir for easy access navigation sendfile.
+// 4. access to the product with import adminData.
+// 5. cr8 router object by calling express.router as a function
+// 6. The function router.get() in middleware is used to handle incoming GET HTTP requests in Express.js. : 
+// 6. rendering template shop with object contains data {prods: products} & pass in with additional key path: path: '/'
+// 7. export the router
+// 6.add new key value pair & pass into template : hasProducts: products.length > 0,
