@@ -21,6 +21,7 @@
     </header>
 
     <main>
+        {{#if hasProducts }}
         <div class="grid">
             <article class="card product-item">
                 <header class="card__header">
@@ -38,6 +39,9 @@
                 </div>
             </article>
         </div>
+        {{ else }}
+        <h1>No Products Found!</h1>
+        {{/if}}
     </main>
 </body>
 
@@ -46,3 +50,4 @@
 {{!-- Progress : --}}
 {{!-- pass in pageTitle: <title>{{ pageTitle }}</title> --}}
 {{!-- add main structure --}}
+{{!-- add new handlebars index :  {{#if hasProducts }}, {{ else }}<h1>No Products Found!</h1>{{/if}}  --}}
