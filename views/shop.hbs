@@ -23,6 +23,7 @@
     <main>
         {{#if hasProducts }}
         <div class="grid">
+            {{#each prods}}
             <article class="card product-item">
                 <header class="card__header">
                     <h1 class="product__title">Great Book</h1>
@@ -38,6 +39,7 @@
                     <button class="btn">Add to Cart</button>
                 </div>
             </article>
+            {{/each}}
         </div>
         {{ else }}
         <h1>No Products Found!</h1>
@@ -51,3 +53,4 @@
 {{!-- pass in pageTitle: <title>{{ pageTitle }}</title> --}}
 {{!-- add main structure --}}
 {{!-- add new handlebars index :  {{#if hasProducts }}, {{ else }}<h1>No Products Found!</h1>{{/if}}  --}}
+{{!-- add a block for loop all products:   {{#each prods}}, {{/each}} --}}
