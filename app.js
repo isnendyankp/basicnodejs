@@ -8,7 +8,7 @@ const app = express();
 
 
 // app.set();
-app.engine('hbs', expressHbs());
+app.engine('hbs', expressHbs({layoutsDir: 'views/layouts/'}));
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 
@@ -48,3 +48,4 @@ app.listen(3000);
 // -- need two parameter : name engine, function rendering will calling with express.js
 // -- // - app.engine('handlebars', expressHbs());  handlebars: name, expressHbs(); function rendering
 // - app.set('view engine', 'handlebars'); switch view engine to handlebars
+// - pass option layoutsDir property on handlebars: app.engine('hbs', expressHbs({layoutsDir: 'views/layouts/'}));
