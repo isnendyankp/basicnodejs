@@ -20,7 +20,7 @@
         <nav class="main-header__nav">
             <ul class="main-header__item-list">
                 <li class="main-header__item"><a class="{{#if activeShop }}active{{/if}}" href="/">Shop</a></li>
-                <li class="main-header__item"><a href="/admin/add-product">Add Product</a></li>
+                <li class="main-header__item"><a class="{{#if activeAddProduct }}active{{/if}}" href="/admin/add-product">Add Product</a></li>
             </ul>
         </nav>
     </header>
@@ -35,5 +35,6 @@
 {{!-- 3. define placeholder body(add extend body content): {{{ body }}} --}}
 {{!-- 4. add extend style(add additional stylesheet) on productCSS --}}
 {{!-- 4. add extend style(add additional stylesheet) on formsCSS--}}
-{{!-- 5. add access handlebars for class active dynamically--}}
+{{!-- 5. add situational statement handlebars for class activeShop dynamically--}}
+{{!-- 6. add situational statement handlebars for class activeAddproduct dynamically--}}
 
