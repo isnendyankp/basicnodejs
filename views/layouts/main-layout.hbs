@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ pageTitle }}</title>
     <link rel="stylesheet" href="/css/main.css">
+    {{#if productCSS}}
+        <link rel="stylesheet" href="/css/product.css">
+    {{/if}}
 </head>
 
 <body>
@@ -27,3 +30,4 @@
 {{!-- 1. cr8 main-layout.hbs with 404 structure for base --}}
 {{!-- 2. cr8 output dynamically pageTitle with handlebars --}}
 {{!-- 3. define placeholder body(add extend body content): {{{ body }}} --}}
+{{!-- 4. add extend style(add additional stylesheet) on productCSS --}}
