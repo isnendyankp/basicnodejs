@@ -16,7 +16,8 @@ router.get('/', (req, res, next) => {
     pageTitle: 'Shop',
     path: '/',
     hasProducts: products.length > 0,
-    activeShop: true
+    activeShop: true,
+    productCSS: true
   });
 });
 
@@ -33,4 +34,5 @@ module.exports = router;
 // 6. rendering template shop with object contains data {prods: products} & pass in with additional key path: path: '/'
 // 7. export the router
 // 6.add new key value pair & pass into template : hasProducts: products.length > 0,
-// 6. add property activeShop & set it into true for pass from main layout 
+// 6. add property activeShop & set it into true for pass from main layout.hbs
+// 6. add property productCSS & set it into true for pass from main layout.hbs 
