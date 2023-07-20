@@ -8,7 +8,14 @@ const app = express();
 
 
 // app.set();
-app.engine('hbs', expressHbs({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}));
+app.engine(
+  'hbs',
+  expressHbs({
+    layoutsDir: 'views/layouts/',
+    defaultLayout: 'main-layout',
+    extname: 'hbs'
+  })
+);
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 
@@ -50,3 +57,4 @@ app.listen(3000);
 // - app.set('view engine', 'handlebars'); switch view engine to handlebars
 // - pass option layoutsDir property on handlebars engine
 // - pass option defaultLayout property on handlebars engine
+// - set the extension name which only applies to the layout and not to all files
