@@ -2,21 +2,17 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const expressHbs = require('express-handlebars');
+// const expressHbs = require('express-handlebars');
 
 const app = express();
 
 
-// app.set();
-app.engine(
-  'hbs',
-  expressHbs({
-    layoutsDir: 'views/layouts/',
-    defaultLayout: 'main-layout',
-    extname: 'hbs'
-  })
-);
-app.set('view engine', 'hbs');
+
+// unactive hbs
+// app.engine('hbs', expressHbs({ layoutsDir: 'views/layouts/', defaultLayout: 'main-layout', extname: 'hbs' }));
+// app.set('view engine', 'hbs');
+
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // import all routes folder
@@ -58,3 +54,4 @@ app.listen(3000);
 // - pass option layoutsDir property on handlebars engine
 // - pass option defaultLayout property on handlebars engine
 // - set the extension name which only applies to the layout and not to all files
+// - unactive hbs & setup view engine into ejs
