@@ -10,7 +10,7 @@ const products = [];
 
 // /admin/add-product => GEt
 // Cr8 filter path for admin to add product
-router.get('/add-product', );
+router.get('/add-product', productsController.getAddProduct);
 
 // /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {
@@ -25,3 +25,4 @@ exports.products = products;
 // - add 3 property & make it true for render: formsCSS: true, productCSS: true, activeAddProduct: true
 // - move function middleware get on route add product
 // - import productsController by requiring controller on product.js
+// - pass in prouctController with controller getAddProduct
