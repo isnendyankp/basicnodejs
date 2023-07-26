@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require('express');
 
-const rootDir = require('../util/path');
+const productsController = require('../controllers/products');
 
 const router = express.Router();
 
@@ -24,3 +24,4 @@ exports.products = products;
 
 // - add 3 property & make it true for render: formsCSS: true, productCSS: true, activeAddProduct: true
 // - move function middleware get on route add product
+// - import productsController by requiring controller on product.js
