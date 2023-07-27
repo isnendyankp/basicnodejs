@@ -16,8 +16,7 @@ exports.postAddProduct = (req, res, next) => {
   res.redirect('/');
 }
 
-(req, res, next) => {
-  const products = adminData.products;
+exports.getProducts = (req, res, next) => {
   res.render('shop', {
     prods: products,
     pageTitle: 'Shop',
@@ -26,7 +25,7 @@ exports.postAddProduct = (req, res, next) => {
     activeShop: true,
     productCSS: true
   });
-}
+};
 
 // - add function get middleware admin route
 // - cr8 export function get middleware with name getAddProduct
@@ -34,3 +33,4 @@ exports.postAddProduct = (req, res, next) => {
 // - cr8 export function post middleware with name postAddProduct
 // - add product array
 // - add function get middleware shop route
+// - cr8 export function get middleware with name getProducts
