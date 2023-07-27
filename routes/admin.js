@@ -14,8 +14,7 @@ router.get('/add-product', productsController.getAddProduct);
 // /admin/add-product => POST
 router.post('/add-product', productsController.postAddProduct);
 
-exports.routes = router;
-exports.products = products;
+module.exports = router;
 
 // - add 3 property & make it true for render: formsCSS: true, productCSS: true, activeAddProduct: true
 // - move function get middleware to products.js
@@ -23,3 +22,4 @@ exports.products = products;
 // - pass in productsController with controller getAddProduct
 // - move function post middleware to products.js
 // - pass in productsController with controller postAddProduct
+// - export the router
