@@ -12,7 +12,7 @@ const productsController = require('../controllers/products');
 // 5
 const router = express.Router();
 // 6
-router.get('/', );
+router.get('/', productsController.getProducts);
 
 // 7
 module.exports = router;
@@ -31,3 +31,4 @@ module.exports = router;
 // 6. add property productCSS & set it into true for pass from main layout.hbs 
 // 3&4. unenable rootDir & adminData
 // import with cr8 variable productsController
+// pass in productsController with controller getProducts
