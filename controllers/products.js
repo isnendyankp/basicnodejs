@@ -1,3 +1,5 @@
+const products = [];
+
 exports.getAddProduct = (req, res, next) => {
   res.render('add-product', {
     pageTitle: 'Add Product',
@@ -18,3 +20,4 @@ exports.postAddProduct = (req, res, next) => {
 // - cr8 export function get middleware with name getAddProduct
 // - add function post middleware admin route
 // - cr8 export function post middleware with name postAddProduct
+// - add product array

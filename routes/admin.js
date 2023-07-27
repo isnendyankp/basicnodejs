@@ -6,7 +6,6 @@ const productsController = require('../controllers/products');
 
 const router = express.Router();
 
-const products = [];
 
 // /admin/add-product => GEt
 // Cr8 filter path for admin to add product
