@@ -9,17 +9,7 @@ const adminData = require('./admin');
 // 5
 const router = express.Router();
 // 6
-router.get('/', (req, res, next) => {
-  const products = adminData.products;
-  res.render('shop', {
-    prods: products,
-    pageTitle: 'Shop',
-    path: '/',
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true
-  });
-});
+router.get('/', );
 
 // 7
 module.exports = router;
