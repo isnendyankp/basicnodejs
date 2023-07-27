@@ -3,9 +3,12 @@ const path = require('path');
 // 2
 const express = require('express');
 // 3
-const rootDir = require('../util/path');
+// const rootDir = require('../util/path');
 // 4
-const adminData = require('./admin');
+// const adminData = require('./admin');
+
+// import products
+const productsController = require('../controllers/products');
 // 5
 const router = express.Router();
 // 6
@@ -26,3 +29,5 @@ module.exports = router;
 // 6. add new key value pair & pass into template : hasProducts: products.length > 0,
 // 6. add property activeShop & set it into true for pass from main layout.hbs
 // 6. add property productCSS & set it into true for pass from main layout.hbs 
+// 3&4. unenable rootDir & adminData
+// import with cr8 variable productsController
