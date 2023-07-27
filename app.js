@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Serving File Staticly for split styling css
 app.use(express.static(path.join(__dirname, 'public')));
 // call Routes
-app.use('/admin', adminData.routes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 // adding a 404 Error page
@@ -54,3 +54,4 @@ app.listen(3000);
 // - set the extension name which only applies to the layout and not to all files
 // - unactive hbs & setup view engine into ejs
 // - change adminData into adminRoutes at import all routes folder
+// - change section call Routes adminData into adminRoutes
