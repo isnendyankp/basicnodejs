@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // import all routes folder
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 // install npm install --save body-parser for parsing
@@ -53,3 +53,4 @@ app.listen(3000);
 // - pass option defaultLayout property on handlebars engine
 // - set the extension name which only applies to the layout and not to all files
 // - unactive hbs & setup view engine into ejs
+// - change adminData into adminRoutes at import all routes folder
