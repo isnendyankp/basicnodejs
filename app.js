@@ -29,7 +29,7 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 // adding a 404 Error page
-app.use();
+app.use(errorController.get404);
 
 // s5-62: shorthand to set up the server
 app.listen(3000);
@@ -56,3 +56,4 @@ app.listen(3000);
 // - change section call Routes adminData into adminRoutes
 // - move 404 controller function middleware to error.js
 // - import errorController
+// - pass in errorController to app.use
