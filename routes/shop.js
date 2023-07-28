@@ -31,4 +31,4 @@ module.exports = router;
 // 6. add property productCSS & set it into true for pass from main layout.hbs 
 // 3&4. unenable rootDir & adminData
 // import with cr8 variable productsController
-// pass in productsController with controller getProducts
+// pass in productsController getProducts

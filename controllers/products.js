@@ -28,9 +28,9 @@ exports.getProducts = (req, res, next) => {
 };
 
 // - add function get middleware admin route
-// - cr8 export function get middleware with name getAddProduct
+// - cr8 export controller function middleware getAddProduct
 // - add function post middleware admin route
-// - cr8 export function post middleware with name postAddProduct
+// - cr8 export controller function middlewaree postAddProduct
 // - add product array
 // - add function get middleware shop route
-// - cr8 export function get middleware with name getProducts
+// - cr8 export controller function middleware getProducts

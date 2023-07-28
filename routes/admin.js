@@ -17,9 +17,9 @@ router.post('/add-product', productsController.postAddProduct);
 module.exports = router;
 
 // - add 3 property & make it true for render: formsCSS: true, productCSS: true, activeAddProduct: true
-// - move function get middleware to products.js
-// - import productsController by requiring controller on product.js
-// - pass in productsController with controller getAddProduct
-// - move function post middleware to products.js
-// - pass in productsController with controller postAddProduct
+// - move get controller function middleware to products.js
+// - import productsController on product.js
+// - pass in productsController getAddProduct
+// - move post controller function middleware  to products.js
+// - pass in productsController postAddProduct
 // - export the router
