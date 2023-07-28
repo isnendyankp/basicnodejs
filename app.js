@@ -27,10 +27,7 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 // adding a 404 Error page
-app.use((req, res, next) => {
-    //  passing pageTitle: 'Page NotFound'
-    res.status(404).render('404', { pageTitle: 'Page Not Found' });
-});
+app.use();
 
 // s5-62: shorthand to set up the server
 app.listen(3000);
@@ -55,3 +52,4 @@ app.listen(3000);
 // - unactive hbs & setup view engine into ejs
 // - change adminData into adminRoutes at import all routes folder
 // - change section call Routes adminData into adminRoutes
+// - move 404 controller function middleware to error.js
