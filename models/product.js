@@ -8,6 +8,10 @@ module.exports = class Product {
     save() {
         products.push(this);
     }
+
+    fetchAll() {
+
+    }
 }
 
 // - create base class product with export
@@ -15,3 +19,4 @@ module.exports = class Product {
 // - cr8 product array
 // - cr8 base save method
 // - add function to store current object to product array
+// - cr8 fetchAll method base
