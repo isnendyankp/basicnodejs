@@ -9,7 +9,7 @@ module.exports = class Product {
         products.push(this);
     }
 
-    fetchAll() {
+    static fetchAll() {
 
     }
 }
@@ -20,3 +20,4 @@ module.exports = class Product {
 // - cr8 base save method
 // - add function to store current object to product array
 // - cr8 fetchAll method base
+// - fetchAll method make it to static for directly on the class object & not an instantiated object
