@@ -11,6 +11,7 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
+  const product = new Product(req.body.title);
   // push new element into this array, a new object
   products.push({ title: req.body.title });
   res.redirect('/');
@@ -35,3 +36,4 @@ exports.getProducts = (req, res, next) => {
 // - add function get middleware shop route
 // - cr8 export controller function middleware getProducts
 // - change import for connecting on model product
+// - cr8 new object product with pass request body title
