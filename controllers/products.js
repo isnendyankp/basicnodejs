@@ -1,4 +1,4 @@
-const products = [];
+const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
   res.render('add-product', {
@@ -34,3 +34,4 @@ exports.getProducts = (req, res, next) => {
 // - add product array
 // - add function get middleware shop route
 // - cr8 export controller function middleware getProducts
+// - change import for connecting on model product
