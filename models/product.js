@@ -6,7 +6,7 @@ module.exports = class Product {
     }
 
     save() {
-        
+        products.push(this);
     }
 }
 
@@ -14,3 +14,4 @@ module.exports = class Product {
 // - cr8 constructor with add property and make it to parameter
 // - cr8 product array
 // - cr8 base save method
+// - add function to store current object to product array
