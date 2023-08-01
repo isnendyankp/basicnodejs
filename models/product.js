@@ -7,7 +7,7 @@ module.exports = class Product {
     }
 
     save() {
-        const p = path.join();
+        const p = path.join(path.dirname(process.mainModule.filename););
     }
 
     static fetchAll() {
@@ -24,4 +24,5 @@ module.exports = class Product {
 // - fetchAll method make it to static for directly on the class object & not an instantiated object
 // - add return products on fetchAll method
 // - import file & path file
-// = edit call path folder on save 
+// = edit call path folder on save
+// - add argument on save method for generates the directory path of the module file that is being executed.
