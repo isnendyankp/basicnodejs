@@ -1,4 +1,5 @@
-const products = [];
+const fs = require('fs');
+const path = require('path');
 
 module.exports = class Product {
     constructor(t) {
@@ -22,3 +23,4 @@ module.exports = class Product {
 // - cr8 fetchAll method base
 // - fetchAll method make it to static for directly on the class object & not an instantiated object
 // - add return products on fetchAll method
+// - import file & path file
