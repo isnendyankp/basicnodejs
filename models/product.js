@@ -7,7 +7,7 @@ module.exports = class Product {
     }
 
     save() {
-        products.push(this);
+        const p = path.join();
     }
 
     static fetchAll() {
@@ -24,3 +24,4 @@ module.exports = class Product {
 // - fetchAll method make it to static for directly on the class object & not an instantiated object
 // - add return products on fetchAll method
 // - import file & path file
+// = edit call path folder on save 
