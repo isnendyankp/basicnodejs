@@ -18,6 +18,7 @@ exports.postAddProduct = (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
+  const products = Product.fetchAll();
   res.render('shop', {
     prods: products,
     pageTitle: 'Shop',
@@ -38,3 +39,4 @@ exports.getProducts = (req, res, next) => {
 // - change import for connecting on model product
 // - cr8 new object product with pass request body title
 // - add save method from model product
+// - cr8 local const for fetchAll product
