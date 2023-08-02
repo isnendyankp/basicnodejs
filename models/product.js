@@ -15,7 +15,7 @@ module.exports = class Product {
         fs.readFile(p, (err, fileContent) => {
             let products = [];
             if (!err) {
-
+                products = JSON.parse(fileContent);
             }
         });
     }
@@ -43,3 +43,4 @@ module.exports = class Product {
 // - check log fileContent
 // - sign products for empty array
 // - cr8 base situational statement for if not error
+// - add products. products will contain the object from fileContent using parse in JSON
