@@ -12,6 +12,7 @@ module.exports = class Product {
         'data',
         'products.json'
         );
+        fs.readFile();
     }
 
     static fetchAll() {
@@ -31,4 +32,5 @@ module.exports = class Product {
 // - edit call path folder on save
 // - add argument on save method for generates the directory path of the module file that is being executed.
 // - add data folder to the root project folder
-// - add store file products.json in data folder 
+// - add store file products.json in data folder
+// - add base readfile for products.json in data folder 
