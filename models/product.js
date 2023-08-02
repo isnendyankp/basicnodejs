@@ -18,7 +18,9 @@ module.exports = class Product {
                 products = JSON.parse(fileContent);
             }
             products.push(this);
-            fs.writeFile(p, JSON.stringify(products));
+            fs.writeFile(p, JSON.stringify(products), err => {
+                console.log(err);
+            });
         });
     }
 
@@ -48,3 +50,4 @@ module.exports = class Product {
 // - add products. products will contain the object from fileContent using parse in JSON:  products = JSON.parse(fileContent);
 // - add new products for push object this: products.push(this);
 // - saves the "products" array in JSON format to a file whose path is specified by the "p" variable:  fs.writeFile(p, JSON.stringify(products));
+// - add call back error with check by log: err => {console.log(err);}
