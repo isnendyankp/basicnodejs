@@ -7,7 +7,11 @@ module.exports = class Product {
     }
 
     save() {
-        const p = path.join(path.dirname(process.mainModule.filename), 'data');
+        const p = path.join(
+        path.dirname(process.mainModule.filename),
+        'data',
+        'products.json'
+        );
     }
 
     static fetchAll() {
@@ -27,3 +31,4 @@ module.exports = class Product {
 // - edit call path folder on save
 // - add argument on save method for generates the directory path of the module file that is being executed.
 // - add data folder to the root project folder
+// - add store file products.json in data folder 
