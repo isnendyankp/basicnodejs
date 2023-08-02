@@ -17,6 +17,7 @@ module.exports = class Product {
             if (!err) {
                 products = JSON.parse(fileContent);
             }
+            products.push(this);
         });
     }
 
@@ -44,3 +45,4 @@ module.exports = class Product {
 // - sign products for empty array
 // - cr8 base situational statement for if not error
 // - add products. products will contain the object from fileContent using parse in JSON
+// - add new products for push object this
