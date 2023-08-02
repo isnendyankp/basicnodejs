@@ -13,7 +13,7 @@ module.exports = class Product {
         'products.json'
         );
         fs.readFile(p, (err, fileContent) => {
-            console.log(fileContent);
+            let products = [];
         });
     }
 
@@ -38,3 +38,4 @@ module.exports = class Product {
 // - add base readfile for products.json in data folder
 // - add p as path for readfile & get error or get data(fileContent)
 // - check log fileContent
+// - sign products for empty array
