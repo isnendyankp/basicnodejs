@@ -14,6 +14,9 @@ module.exports = class Product {
         );
         fs.readFile(p, (err, fileContent) => {
             let products = [];
+            if (!err) {
+
+            }
         });
     }
 
@@ -39,3 +42,4 @@ module.exports = class Product {
 // - add p as path for readfile & get error or get data(fileContent)
 // - check log fileContent
 // - sign products for empty array
+// - cr8 base situational statement for if not error
