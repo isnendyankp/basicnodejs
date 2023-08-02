@@ -12,7 +12,9 @@ module.exports = class Product {
         'data',
         'products.json'
         );
-        fs.readFile(p, (err, fileContent));
+        fs.readFile(p, (err, fileContent) => {
+            console.log(fileContent);
+        });
     }
 
     static fetchAll() {
@@ -35,3 +37,4 @@ module.exports = class Product {
 // - add store file products.json in data folder
 // - add base readfile for products.json in data folder
 // - add p as path for readfile & get error or get data(fileContent)
+// - check log fileContent
