@@ -29,8 +29,8 @@ module.exports = class Product {
             if(err){
                 return [];
             }
-        })
-        return products;
+            return JSON.parse(fileContent);
+        });
     }
 }
 
@@ -58,3 +58,4 @@ module.exports = class Product {
 // - add call back error with check by log: err => {console.log(err);}
 // - add readfile in fetchAll for read file at path(p) to get error or fileContent
 // - Add return empty array on conditional statement if got error(fetchAll)
+// - Add return fileContent in a parsed form & get rid return product
