@@ -26,7 +26,9 @@ module.exports = class Product {
 
     static fetchAll() {
         fs.readFile(p, (err, fileContent) => {
-
+            if(err){
+                return [];
+            }
         })
         return products;
     }
@@ -55,3 +57,4 @@ module.exports = class Product {
 // - saves the "products" array in JSON format to a file whose path is specified by the "p" variable:  fs.writeFile(p, JSON.stringify(products));
 // - add call back error with check by log: err => {console.log(err);}
 // - add readfile in fetchAll for read file at path(p) to get error or fileContent
+// - Add return empty array on conditional statement if got error(fetchAll)
