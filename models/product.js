@@ -25,6 +25,11 @@ module.exports = class Product {
     }
 
     static fetchAll() {
+        const p = path.join(
+            path.dirname(process.mainModule.filename),
+            'data',
+            'products.json'
+        );
         fs.readFile(p, (err, fileContent) => {
             if(err){
                 return [];
@@ -59,3 +64,4 @@ module.exports = class Product {
 // - add readfile in fetchAll for read file at path(p) to get error or fileContent
 // - Add return empty array on conditional statement if got error(fetchAll)
 // - Add return fileContent in a parsed form & get rid return product
+// - Add define path too on fetchAll: const p
