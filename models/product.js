@@ -31,7 +31,7 @@ module.exports = class Product {
         );
         fs.readFile(p, (err, fileContent) => {
             if (err) {
-                return [];
+                cb([]);
             }
             cb(JSON.parse(fileContent));
         });
@@ -65,3 +65,4 @@ module.exports = class Product {
 // - Add return fileContent in a parsed form & get rid return product
 // - Add define path too on fetchAll: const p
 // - Add poramater/argument on fetchAll method
+// - Add parameter/argument on return with pass in cb([]);
