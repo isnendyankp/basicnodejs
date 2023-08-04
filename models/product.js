@@ -23,21 +23,20 @@ module.exports = class Product {
             });
         });
     }
-
-    static fetchAll() {
+    static fetchAll(cb) {
         const p = path.join(
             path.dirname(process.mainModule.filename),
             'data',
             'products.json'
         );
         fs.readFile(p, (err, fileContent) => {
-            if(err){
+            if (err) {
                 return [];
             }
-            return JSON.parse(fileContent);
+            cb(JSON.parse(fileContent));
         });
     }
-}
+};
 
 // - create base class product with export
 // - cr8 constructor with add property and make it to parameter
@@ -65,3 +64,4 @@ module.exports = class Product {
 // - Add return empty array on conditional statement if got error(fetchAll)
 // - Add return fileContent in a parsed form & get rid return product
 // - Add define path too on fetchAll: const p
+// - Add poramater/argument on fetchAll method
