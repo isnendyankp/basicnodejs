@@ -18,16 +18,15 @@ exports.postAddProduct = (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
- Product.fetchAll((products => {
-
- }));
-  res.render('shop', {
-    prods: products,
-    pageTitle: 'Shop',
-    path: '/',
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true
+  Product.fetchAll(products => {
+    res.render('shop', {
+      prods: products,
+      pageTitle: 'Shop',
+      path: '/',
+      hasProducts: products.length > 0,
+      activeShop: true,
+      productCSS: true
+    });
   });
 };
 
@@ -43,3 +42,4 @@ exports.getProducts = (req, res, next) => {
 // - add save method from model product
 // - cr8 local const for fetchAll product
 // - cr8 fetchAll Method with parameter products
+// - move render in Product Method on function getProducts
