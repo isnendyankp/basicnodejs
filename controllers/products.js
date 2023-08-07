@@ -18,7 +18,9 @@ exports.postAddProduct = (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
-  const products = Product.fetchAll();
+ Product.fetchAll((products => {
+
+ }));
   res.render('shop', {
     prods: products,
     pageTitle: 'Shop',
@@ -40,3 +42,4 @@ exports.getProducts = (req, res, next) => {
 // - cr8 new object product with pass request body title
 // - add save method from model product
 // - cr8 local const for fetchAll product
+// - cr8 fetchAll Method with parameter products
