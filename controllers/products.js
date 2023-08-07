@@ -12,10 +12,9 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = (req, res, next) => {
   const product = new Product(req.body.title);
-  // push new element into this array, a new object
   product.save();
   res.redirect('/');
-}
+};
 
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
@@ -29,6 +28,7 @@ exports.getProducts = (req, res, next) => {
     });
   });
 };
+
 
 // - add function get middleware admin route
 // - cr8 export controller function middleware getAddProduct
