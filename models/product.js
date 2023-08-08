@@ -23,11 +23,6 @@ module.exports = class Product {
 
   save() {
     getProductsFromFile();
-    const p = path.join(
-      path.dirname(process.mainModule.filename),
-      'data',
-      'products.json'
-    );
     fs.readFile(p, (err, fileContent) => {
       let products = [];
       if (!err) {
@@ -79,3 +74,4 @@ module.exports = class Product {
 // - add parameter callback in helper function
 // - Add helperfunction in fetchAll method: getProductsFromFile(cb);
 // - Add getProductsFromFile at save
+// - remove path.join on save (because already setup at getProductsFromFile )
