@@ -1,6 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
+
+const  getProductsFromFile = () => {
+
+}
+
 module.exports = class Product {
   constructor(t) {
     this.title = t;
@@ -68,3 +73,4 @@ module.exports = class Product {
 // - Add define path too on fetchAll: const p
 // - Add poramater/argument on fetchAll method
 // - Add parameter/argument on return with pass in cb([]);
+// - cr8 base helper function getProductsFromFile
