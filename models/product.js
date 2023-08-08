@@ -40,7 +40,7 @@ module.exports = class Product {
   }
 
   static fetchAll(cb) {
-    
+    getProductsFromFile(cb);
   }
 };
 
@@ -76,3 +76,4 @@ module.exports = class Product {
 // - cr8 base helper function getProductsFromFile
 // - move fetchAll code to helper function
 // - add parameter callback in helper function
+// - Add helperfunction in fetchAll method: getProductsFromFile(cb);
