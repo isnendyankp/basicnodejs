@@ -3,7 +3,17 @@ const path = require('path');
 
 
 const  getProductsFromFile = () => {
-
+  const p = path.join(
+      path.dirname(process.mainModule.filename),
+      'data',
+      'products.json'
+    );
+    fs.readFile(p, (err, fileContent) => {
+      if (err) {
+        cb([]);
+      }
+      cb(JSON.parse(fileContent));
+  });
 }
 
 module.exports = class Product {
@@ -30,17 +40,7 @@ module.exports = class Product {
   }
 
   static fetchAll(cb) {
-    const p = path.join(
-      path.dirname(process.mainModule.filename),
-      'data',
-      'products.json'
-    );
-    fs.readFile(p, (err, fileContent) => {
-      if (err) {
-        cb([]);
-      }
-      cb(JSON.parse(fileContent));
-    });
+    
   }
 };
 
@@ -74,3 +74,4 @@ module.exports = class Product {
 // - Add poramater/argument on fetchAll method
 // - Add parameter/argument on return with pass in cb([]);
 // - cr8 base helper function getProductsFromFile
+// - move fetchAll code to helper function
