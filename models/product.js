@@ -22,6 +22,7 @@ module.exports = class Product {
   }
 
   save() {
+    getProductsFromFile();
     const p = path.join(
       path.dirname(process.mainModule.filename),
       'data',
@@ -77,3 +78,4 @@ module.exports = class Product {
 // - move fetchAll code to helper function
 // - add parameter callback in helper function
 // - Add helperfunction in fetchAll method: getProductsFromFile(cb);
+// - Add getProductsFromFile at save
