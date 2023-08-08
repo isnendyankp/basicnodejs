@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-const  getProductsFromFile = () => {
+const  getProductsFromFile = (cb) => {
   const p = path.join(
       path.dirname(process.mainModule.filename),
       'data',
@@ -75,3 +75,4 @@ module.exports = class Product {
 // - Add parameter/argument on return with pass in cb([]);
 // - cr8 base helper function getProductsFromFile
 // - move fetchAll code to helper function
+// - add parameter callback in helper function
