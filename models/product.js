@@ -9,10 +9,11 @@ const  getProductsFromFile = (cb) => {
       'products.json'
     );
     fs.readFile(p, (err, fileContent) => {
-      if (err) {
-        cb([]);
-      }
+    if (err) {
+      cb([]);
+    } else {
       cb(JSON.parse(fileContent));
+    }
   });
 }
 
@@ -75,3 +76,4 @@ module.exports = class Product {
 // - Add helperfunction in fetchAll method: getProductsFromFile(cb);
 // - Add getProductsFromFile at save
 // - remove path.join on save (because already setup at getProductsFromFile )
+// - fix readfile at getProductsFromFile (fix with give else on conditional statement)
