@@ -1,21 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
+const p = path.join(
+  path.dirname(process.mainModule.filename),
+  'data',
+  'products.json'
+);
 
-const  getProductsFromFile = (cb) => {
-  const p = path.join(
-      path.dirname(process.mainModule.filename),
-      'data',
-      'products.json'
-    );
-    fs.readFile(p, (err, fileContent) => {
+const getProductsFromFile = cb => {
+  fs.readFile(p, (err, fileContent) => {
     if (err) {
       cb([]);
     } else {
       cb(JSON.parse(fileContent));
     }
   });
-}
+};
 
 module.exports = class Product {
   constructor(t) {
@@ -35,6 +35,7 @@ module.exports = class Product {
     getProductsFromFile(cb);
   }
 };
+
 
 
 // - create base class product with export
@@ -75,3 +76,4 @@ module.exports = class Product {
 // - remove readfile code on save
 // - cr8 base callback product at save getProductsFromFile
 // - move method push & function fs.writeFile to callback product
+// - move out const p from const getProductsFromFile
