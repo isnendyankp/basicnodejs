@@ -23,11 +23,12 @@ module.exports = class Product {
   }
 
   save() {
-    getProductsFromFile(products => {});
+    getProductsFromFile(products => {
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), err => {
         console.log(err);
       });
+    });
   }
 
   static fetchAll(cb) {
@@ -73,3 +74,4 @@ module.exports = class Product {
 // - fix readfile at getProductsFromFile (fix with give else on conditional statement)
 // - remove readfile code on save
 // - cr8 base callback product at save getProductsFromFile
+// - move method push & function fs.writeFile to callback product
