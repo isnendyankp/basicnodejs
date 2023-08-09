@@ -6,14 +6,12 @@ const express = require('express');
 // const rootDir = require('../util/path');
 // 4
 // const adminData = require('./admin');
-
 // import products
 const productsController = require('../controllers/products');
 // 5
 const router = express.Router();
 // 6
 router.get('/', productsController.getProducts);
-
 // 7
 module.exports = router;
 
