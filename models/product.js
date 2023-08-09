@@ -24,16 +24,10 @@ module.exports = class Product {
 
   save() {
     getProductsFromFile();
-    fs.readFile(p, (err, fileContent) => {
-      let products = [];
-      if (!err) {
-        products = JSON.parse(fileContent);
-      }
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), err => {
         console.log(err);
       });
-    });
   }
 
   static fetchAll(cb) {
@@ -77,3 +71,4 @@ module.exports = class Product {
 // - Add getProductsFromFile at save
 // - remove path.join on save (because already setup at getProductsFromFile )
 // - fix readfile at getProductsFromFile (fix with give else on conditional statement)
+// - remove readfile code on save
