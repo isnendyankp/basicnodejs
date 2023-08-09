@@ -18,7 +18,7 @@ exports.postAddProduct = (req, res, next) => {
 
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
-    res.render('shop', {
+    res.render('shop/product-list', {
       prods: products,
       pageTitle: 'Shop',
       path: '/',
@@ -42,3 +42,4 @@ exports.getProducts = (req, res, next) => {
 // - cr8 local const for fetchAll product
 // - cr8 fetchAll Method with parameter products
 // - move render in Product Method on function getProducts
+// - change render path for getProducts
