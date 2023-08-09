@@ -23,7 +23,7 @@ module.exports = class Product {
   }
 
   save() {
-    getProductsFromFile();
+    getProductsFromFile(products => {});
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), err => {
         console.log(err);
@@ -72,3 +72,4 @@ module.exports = class Product {
 // - remove path.join on save (because already setup at getProductsFromFile )
 // - fix readfile at getProductsFromFile (fix with give else on conditional statement)
 // - remove readfile code on save
+// - cr8 base callback product at save getProductsFromFile
