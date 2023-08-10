@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
-  res.render('add-product', {
+  res.render('admin/add-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
     formsCSS: true,
@@ -42,4 +42,5 @@ exports.getProducts = (req, res, next) => {
 // - cr8 local const for fetchAll product
 // - cr8 fetchAll Method with parameter products
 // - move render in Product Method on function getProducts
-// - change render path for getProducts
+// - change render path for getProducts : res.render('shop/product-list',
+// - change render path for getAddProduct:  res.render('admin/add-product',
