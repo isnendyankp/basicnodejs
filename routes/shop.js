@@ -11,13 +11,13 @@ const shopController = require('../controllers/shop');
 // 5
 const router = express.Router();
 // 6
-router.get('/', shopController.getProducts);
+router.get('/', shopController.getIndex);
 
-router.get('/products');
+router.get('/products', shopController.getProducts);
 
-router.get('/cart');
+router.get('/cart', shopController.getCart);
 
-router.get('/checkout');
+router.get('/checkout', shopController.getCheckout);
 // 7
 module.exports = router;
 
@@ -38,3 +38,4 @@ module.exports = router;
 // pass in productsController getProducts
 // Registering Routes: product,cart&checkout
 // - change path router into shopController
+// - fix path all router controller for each part
