@@ -9,6 +9,9 @@ const router = express.Router();
 // /admin/add-product => GET
 router.get('/add-product', productsController.getAddProduct);
 
+// /admin/products => GET
+router.get('/products';
+
 // /admin/add-product => POST
 router.post('/add-product', productsController.postAddProduct);
 
@@ -21,3 +24,4 @@ module.exports = router;
 // - move post controller function middleware  to products.js
 // - pass in productsController postAddProduct
 // - export the router
+// - Registering Routes: admin>products
