@@ -15,6 +15,19 @@ exports.getProducts = (req, res, next) => {
   });
 };
 
+exports.getIndex = (req, res, next) => {
+  Product.fetchAll(products => {
+    res.render('shop/index', {
+      prods: products,
+      pageTitle: 'Shop',
+      path: '/',
+      hasProducts: products.length > 0,
+      activeShop: true,
+      productCSS: true
+    });
+  });
+};
+
 // - add function get middleware admin route
 // - cr8 export controller function middleware getAddProduct
 // - add function post middleware admin route
@@ -31,3 +44,4 @@ exports.getProducts = (req, res, next) => {
 // - change render path for getProducts : res.render('shop/product-list',
 // - change render path for getAddProduct:  res.render('admin/add-product',
 // - move getAddProduct & postAddProduct to admin.js controller
+// - cr8 export controller function middleware getIndex
