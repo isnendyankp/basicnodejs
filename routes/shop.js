@@ -7,7 +7,7 @@ const express = require('express');
 // 4
 // const adminData = require('./admin');
 // import products
-const productsController = require('../controllers/products');
+const productsController = require('../controllers/shop');
 // 5
 const router = express.Router();
 // 6
