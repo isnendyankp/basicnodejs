@@ -7,11 +7,11 @@ const express = require('express');
 // 4
 // const adminData = require('./admin');
 // import products
-const productsController = require('../controllers/shop');
+const shopController = require('../controllers/shop');
 // 5
 const router = express.Router();
 // 6
-router.get('/', productsController.getProducts);
+router.get('/', shopController.getProducts);
 
 router.get('/products');
 
@@ -37,3 +37,4 @@ module.exports = router;
 // import with cr8 variable productsController
 // pass in productsController getProducts
 // Registering Routes: product,cart&checkout
+// - change path router into shopController
