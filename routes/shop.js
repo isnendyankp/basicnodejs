@@ -12,6 +12,12 @@ const productsController = require('../controllers/products');
 const router = express.Router();
 // 6
 router.get('/', productsController.getProducts);
+
+router.get('/products');
+
+router.get('/cart');
+
+router.get('/checkout');
 // 7
 module.exports = router;
 
@@ -30,3 +36,4 @@ module.exports = router;
 // 3&4. unenable rootDir & adminData
 // import with cr8 variable productsController
 // pass in productsController getProducts
+// Registering Routes: product,cart&checkout
