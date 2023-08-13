@@ -15,3 +15,9 @@ exports.postAddProduct = (req, res, next) => {
   product.save();
   res.redirect('/');
 };
+
+exports.getProducts = (req, res, next) => {
+
+};
+
+// - cr8 new controller getProducts base function midleware
