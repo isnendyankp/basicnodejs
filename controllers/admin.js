@@ -17,7 +17,14 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-
+  Product.fetchAll(products => {
+    res.render('admin/products', {
+      prods: products,
+      pageTitle: 'Admin Products',
+      path: '/admin/products'
+    });
+  });
 };
 
 // - cr8 new controller getProducts base function midleware
+// - add fetchALl product & render view  on getProducts
