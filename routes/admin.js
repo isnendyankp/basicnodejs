@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/add-product', adminController.getAddProduct);
 
 // /admin/products => GET
-router.get('/products');
+router.get('/products', adminController.getProducts);
 
 // /admin/add-product => POST
 router.post('/add-product', adminController.postAddProduct);
@@ -26,3 +26,4 @@ module.exports = router;
 // - export the router
 // - Registering Routes: admin>products
 // - change controller path on router into adminController
+// - change controller path for getProducts
