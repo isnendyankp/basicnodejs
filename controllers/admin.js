@@ -15,7 +15,7 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
-  const product = new Product(req.body.title);
+  const product = new Product(title, imageUrl, description, price);
   product.save();
   res.redirect('/');
 };
@@ -33,3 +33,4 @@ exports.getProducts = (req, res, next) => {
 // - cr8 new controller getProducts base function midleware
 // - add fetchALl product & render view  on getProducts
 // - cr8 const structured for 4 paramter(title, imgUrl, price, description).
+// - Pass in all new paramater on postAddProduct(title, imgUrl, price, description)
