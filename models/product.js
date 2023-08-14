@@ -19,7 +19,10 @@ const getProductsFromFile = cb => {
 
 module.exports = class Product {
   constructor(title, imageUrl, description, price) {
-    this.title = t;
+    this.title = title;
+    this.imageUrl = imageUrl;
+    this.description = description;
+    this.price = price;
   }
 
   save() {
@@ -78,3 +81,4 @@ module.exports = class Product {
 // - move method push & function fs.writeFile to callback product
 // - move out const p from const getProductsFromFile
 // - Add argument / parameter on constructor class product
+// - store all that data properties
