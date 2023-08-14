@@ -18,7 +18,7 @@ const getProductsFromFile = cb => {
 };
 
 module.exports = class Product {
-  constructor(t) {
+  constructor(title, imageUrl, description, price) {
     this.title = t;
   }
 
@@ -77,3 +77,4 @@ module.exports = class Product {
 // - cr8 base callback product at save getProductsFromFile
 // - move method push & function fs.writeFile to callback product
 // - move out const p from const getProductsFromFile
+// - Add argument / parameter on constructor class product
