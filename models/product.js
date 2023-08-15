@@ -26,6 +26,7 @@ module.exports = class Product {
   }
 
   save() {
+    this.id = Math.random().toString();
     getProductsFromFile(products => {
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), err => {
@@ -80,3 +81,4 @@ module.exports = class Product {
 // - move out const p from const getProductsFromFile
 // - Add argument / parameter on constructor class product
 // - store all that data properties
+// - sign ID on save (reason for all product will have an ID)
