@@ -12,6 +12,8 @@ router.get('/products', shopController.getProducts);
 
 router.get('/cart', shopController.getCart);
 
+router.get('/orders', shopController.getOrders);
+
 router.get('/checkout', shopController.getCheckout);
 
 module.exports = router;
@@ -34,3 +36,4 @@ module.exports = router;
 // - Registering Routes: product,cart&checkout
 // - change path router into shopController
 // - fix path all router controller for each part
+// - Add orders route with controller getOrders
