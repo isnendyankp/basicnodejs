@@ -41,7 +41,6 @@ exports.getCheckout = (req, res, next) => {
   });
 };
 
-
 // - add function get middleware admin route
 // - cr8 export controller function middleware getAddProduct
 // - add function post middleware admin route
