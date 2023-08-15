@@ -27,12 +27,20 @@ exports.getCart = (req, res, next) => {
   });
 };
 
+exports.getOrders = (req, res, next) => {
+  res.render('shop/orders', {
+    path: '/orders',
+    pageTitle: 'Your Orders'
+  });
+};
+
 exports.getCheckout = (req, res, next) => {
   res.render('shop/checkout', {
     path: '/checkout',
     pageTitle: 'Checkout'
   });
 };
+
 
 // - add function get middleware admin route
 // - cr8 export controller function middleware getAddProduct
@@ -51,4 +59,5 @@ exports.getCheckout = (req, res, next) => {
 // - change render path for getAddProduct:  res.render('admin/add-product',
 // - move getAddProduct & postAddProduct to admin.js controller
 // - cr8 export controller function middleware getIndex
-// - cr8 getCart & getCheckout controller function middleware 
+// - cr8 getCart & getCheckout controller function middleware
+// - cr8 getOrders controller function middleware
