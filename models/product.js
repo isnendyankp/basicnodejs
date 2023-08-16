@@ -38,6 +38,10 @@ module.exports = class Product {
   static fetchAll(cb) {
     getProductsFromFile(cb);
   }
+
+  static findById() {
+
+  }
 };
 
 // - create base class product with export
@@ -82,3 +86,4 @@ module.exports = class Product {
 // - Add argument / parameter on constructor class product
 // - store all that data properties
 // - sign ID on save (reason for all product will have an ID)
+// - cr8 base static method findById
