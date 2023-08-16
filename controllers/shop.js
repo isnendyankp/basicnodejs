@@ -12,7 +12,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById();
+  Product.findById(prodId, product => {});
   res.redirect('/');
 };
 
@@ -68,3 +68,4 @@ exports.getCheckout = (req, res, next) => {
 // - cr8 getOrders controller function middleware
 // - cr8 getProduct function middleware with require params.productId
 // - Add base function Product.findById
+// - pass in prodId for find product
