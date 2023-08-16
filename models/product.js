@@ -41,7 +41,7 @@ module.exports = class Product {
 
   static findById(id, cb) {
     getProductsFromFile(products => {
-
+      const product = products.find(p => p.id === id);
     });
   }
 };
@@ -91,3 +91,4 @@ module.exports = class Product {
 // - cr8 base static method findById
 // - Add id as argument & cb as callback if done
 // - Add getProductsFromFile funct for get data product
+// - cr8 function product to find product by id with p.id equal with id
