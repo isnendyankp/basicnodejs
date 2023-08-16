@@ -39,7 +39,7 @@ module.exports = class Product {
     getProductsFromFile(cb);
   }
 
-  static findById() {
+  static findById(id, cb) {
 
   }
 };
@@ -87,3 +87,4 @@ module.exports = class Product {
 // - store all that data properties
 // - sign ID on save (reason for all product will have an ID)
 // - cr8 base static method findById
+// - Add id as argument & cb as callback if done
