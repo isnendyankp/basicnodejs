@@ -10,7 +10,7 @@ router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
-router.get('/products/:productId');
+router.get('/products/:productId', shopController.getProduct);
 
 router.get('/cart', shopController.getCart);
 
@@ -41,3 +41,4 @@ module.exports = router;
 // - fix path all router controller for each part
 // - Add orders route with controller getOrders
 // - cr8 base dynamic params segment the ID
+// - Fix route path shopController to getProduct function
