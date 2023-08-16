@@ -10,6 +10,8 @@ router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
+router.get('/products/:productId');
+
 router.get('/cart', shopController.getCart);
 
 router.get('/orders', shopController.getOrders);
@@ -17,6 +19,7 @@ router.get('/orders', shopController.getOrders);
 router.get('/checkout', shopController.getCheckout);
 
 module.exports = router;
+
 
 // progress:
 // - import path for res.sendFile
@@ -37,3 +40,4 @@ module.exports = router;
 // - change path router into shopController
 // - fix path all router controller for each part
 // - Add orders route with controller getOrders
+// - cr8 base dynamic params segment the ID
