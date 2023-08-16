@@ -10,6 +10,12 @@ exports.getProducts = (req, res, next) => {
   });
 };
 
+exports.getProduct = (req, res, next) => {
+  const prodId = req.params.productId;
+  console.log(prodId);
+  res.redirect('/');
+};
+
 exports.getIndex = (req, res, next) => {
   Product.fetchAll(products => {
     res.render('shop/index', {
@@ -60,3 +66,4 @@ exports.getCheckout = (req, res, next) => {
 // - cr8 export controller function middleware getIndex
 // - cr8 getCart & getCheckout controller function middleware
 // - cr8 getOrders controller function middleware
+// - cr8 getProduct function middleware with require params.productId
