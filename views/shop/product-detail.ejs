@@ -5,10 +5,15 @@
         <%- include('../includes/navigation.ejs') %>
         <main class="centered">
             <h1><%= product.title %></h1>
+            <hr>
+            <div>
+                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+            </div>
         </main>
         <%- include('../includes/end.ejs') %>
 
 
 <!-- Cr8 base product detail views structure  -->
 <!-- Add class centered on main useful for css -->
-<!-- Add get product and output the title -->
+<!-- Add product and output the title -->
+<!-- Add product and output the image -->
