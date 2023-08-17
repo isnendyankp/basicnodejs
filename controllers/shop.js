@@ -13,9 +13,10 @@ exports.getProducts = (req, res, next) => {
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId, product => {
-    console.log(product);
+    res.render('shop/product-detail', {
+      
+    });
   });
-  res.redirect('/');
 };
 
 exports.getIndex = (req, res, next) => {
@@ -72,3 +73,4 @@ exports.getCheckout = (req, res, next) => {
 // - Add base function Product.findById
 // - pass in prodId for find product
 // - Add argument with console.log(product) for information product after find Id
+// - Add res.render for product detail views on getProduct
