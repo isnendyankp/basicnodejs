@@ -14,12 +14,13 @@ router.get('/products/:productId', shopController.getProduct);
 
 router.get('/cart', shopController.getCart);
 
+router.post('/cart', shopController.postCart);
+
 router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
 
 module.exports = router;
-
 
 // progress:
 // - import path for res.sendFile
@@ -42,3 +43,4 @@ module.exports = router;
 // - Add orders route with controller getOrders
 // - cr8 base dynamic params segment the ID
 // - Fix route path shopController to getProduct function
+// - cr8 route post for postCart controller function
