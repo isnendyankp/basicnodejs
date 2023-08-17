@@ -14,7 +14,9 @@ exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId, product => {
     res.render('shop/product-detail', {
-      
+      product: product,
+      pageTitle: product.title,
+      path: '/products'
     });
   });
 };
@@ -74,3 +76,4 @@ exports.getCheckout = (req, res, next) => {
 // - pass in prodId for find product
 // - Add argument with console.log(product) for information product after find Id
 // - Add res.render for product detail views on getProduct
+// - pass in product property include the path
