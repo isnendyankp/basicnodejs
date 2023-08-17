@@ -40,7 +40,8 @@ exports.getCart = (req, res, next) => {
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
-  
+  console.log(prodId);
+  res.redirect('/cart');
 };
 
 exports.getOrders = (req, res, next) => {
@@ -84,3 +85,4 @@ exports.getCheckout = (req, res, next) => {
 // - pass in product property include the path
 // - cr8 base postCart controller function
 // - cr8 prodId for request body productId
+// - log prodId & res redirect cart
