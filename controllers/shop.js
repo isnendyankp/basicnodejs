@@ -38,6 +38,11 @@ exports.getCart = (req, res, next) => {
   });
 };
 
+exports.postCart = (req, res, next) => {
+  const prodId = req.body.productId;
+  
+};
+
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', {
     path: '/orders',
@@ -77,3 +82,5 @@ exports.getCheckout = (req, res, next) => {
 // - Add argument with console.log(product) for information product after find Id
 // - Add res.render for product detail views on getProduct
 // - pass in product property include the path
+// - cr8 base postCart controller function
+// - cr8 prodId for request body productId
