@@ -12,7 +12,7 @@ module.exports = class Cart {
     static addProduct(id) {
       // Fetch the previous cart
       fs.readFile(p, (err, fileContent) => {
-        
+        let cart = { products: [], totalPrice: 0 };
         })
     }
 }
@@ -25,3 +25,4 @@ module.exports = class Cart {
 // - import file system & path
 // - cr8 path.join function for cart models
 // - s9-123:cr8 readFile funct with path & callback as a argument then at callback function has 2 paramater err & fileContent
+// - s9-123:Cr8 cart = product array & totalprice 0
