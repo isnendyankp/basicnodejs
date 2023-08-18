@@ -16,7 +16,11 @@ module.exports = class Cart {
         if (!err) {
           cart = JSON.parse(fileContent);
         }
-      };
+        // Analyze the cart => Find existing product
+        const existingProductIndex = cart.products.find(
+          prod => prod.id === id
+        );
+      }
   }
 }
 
@@ -30,3 +34,4 @@ module.exports = class Cart {
 // - s9-123:cr8 readFile funct with path & callback as a argument then at callback function has 2 paramater err & fileContent
 // - s9-123:Cr8 cart = product array & totalprice 0
 // - s9-123:checking If no error filecontent convert to object with JSON.parse()
+// - s9-123:cr8 variable for fine existing product
