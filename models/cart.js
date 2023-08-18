@@ -20,7 +20,12 @@ module.exports = class Cart {
         const existingProductIndex = cart.products.find(
           prod => prod.id === id
         );
-      }
+      
+        // Add new product/ increase quantity
+        if (existingProduct) {
+
+        }
+      });
   }
 }
 
@@ -35,3 +40,4 @@ module.exports = class Cart {
 // - s9-123:Cr8 cart = product array & totalprice 0
 // - s9-123:checking If no error filecontent convert to object with JSON.parse()
 // - s9-123:cr8 variable for fine existing product
+// - s9-123:cr8 base statement for increase quatity
