@@ -1,7 +1,6 @@
 module.exports = class Cart {
-    constructor() {
-        this.products = [];
-        this.totalPrice = 0;
+    static addProduct(id) {
+        
     }
 }
 
@@ -9,3 +8,4 @@ module.exports = class Cart {
 // - add constructor base
 // - Add product property with type array
 // - Add totalPrice property with equal 0
+// - remove property to addProduct method with param id
