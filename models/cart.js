@@ -17,13 +17,13 @@ module.exports = class Cart {
           cart = JSON.parse(fileContent);
         }
         // Analyze the cart => Find existing product
-        const existingProductIndex = cart.products.find(
+        const existingProduct = cart.products.find(
           prod => prod.id === id
         );
-      
+         let updatedProduct;
         // Add new product/ increase quantity
         if (existingProduct) {
-
+          
         }
       });
   }
@@ -41,3 +41,4 @@ module.exports = class Cart {
 // - s9-123:checking If no error filecontent convert to object with JSON.parse()
 // - s9-123:cr8 variable for fine existing product
 // - s9-123:cr8 base statement for increase quatity
+// - s9-123:cr8 updatedProduct for save new product
