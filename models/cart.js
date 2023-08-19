@@ -10,32 +10,35 @@ const p = path.join(
 
 module.exports = class Cart {
   static addProduct(id, productPrice) {
-      // Fetch the previous cart
-      fs.readFile(p, (err, fileContent) => {
-        let cart = { products: [], totalPrice: 0 };
-        if (!err) {
-          cart = JSON.parse(fileContent);
-        }
-        // Analyze the cart => Find existing product
-        const existingProductIndex = cart.products.findIndex(
-          prod => prod.id === id
-        );
-        const existingProduct = cart.products[existingProductIndex];
-         let updatedProduct;
-        // Add new product/ increase quantity
-        if (existingProduct) {
-            updatedProduct = { ...existingProduct };
-            updatedProduct.qty = updatedProduct.qty + 1;
-            cart.products = [...cart.products];
-            cart.products[existingProductIndex] = updatedProduct;
-        } else {
+    // Fetch the previous cart
+    fs.readFile(p, (err, fileContent) => {
+      let cart = { products: [], totalPrice: 0 };
+      if (!err) {
+        cart = JSON.parse(fileContent);
+      }
+      // Analyze the cart => Find existing product
+      const existingProductIndex = cart.products.findIndex(
+        prod => prod.id === id
+      );
+      const existingProduct = cart.products[existingProductIndex];
+      let updatedProduct;
+      // Add new product/ increase quantity
+      if (existingProduct) {
+        updatedProduct = { ...existingProduct };
+        updatedProduct.qty = updatedProduct.qty + 1;
+        cart.products = [...cart.products];
+        cart.products[existingProductIndex] = updatedProduct;
+      } else {
         updatedProduct = { id: id, qty: 1 };
         cart.products = [...cart.products, updatedProduct];
-        }
-        cart.totalPrice = cart.totalPrice + productPrice;
+      }
+      cart.totalPrice = cart.totalPrice + +productPrice;
+      fs.writeFile(p, JSON.stringify(cart), err => {
+        console.log(err);
       });
+    });
   }
-}
+};
 
 // - cr8 class cart model base
 // - add constructor base
@@ -56,3 +59,4 @@ module.exports = class Cart {
 // - s9-123:Add spread operator on updateProduct at else statement
 // - s9-123:cr8 existingProductIndex for find existing product by index
 // - s9-123:Add cart.products after updateProduct in array
+// - s9-123:cr8 fs.writeFile function with 3 parameter: p for path, JSON.stringify(cart) for change object cart into string JSON and callback function for error
