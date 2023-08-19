@@ -4,9 +4,6 @@ exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
-    formsCSS: true,
-    productCSS: true,
-    activeAddProduct: true
   });
 };
 
@@ -18,6 +15,13 @@ exports.postAddProduct = (req, res, next) => {
   const product = new Product(title, imageUrl, description, price);
   product.save();
   res.redirect('/');
+};
+
+exports.getEditProduct = (req, res, next) => {
+  res.render('admin/edit-product', {
+    pageTitle: 'Add Product',
+    path: '/admin/add-product',
+  });
 };
 
 exports.getProducts = (req, res, next) => {
@@ -35,3 +39,4 @@ exports.getProducts = (req, res, next) => {
 // - cr8 const structured for 4 paramter(title, imgUrl, price, description).
 // - Pass in all new paramater on postAddProduct(title, imgUrl, price, description)
 // - s9-124:Change path res.render getAddProduct into edit-product
+// - s9-124:Cr8 getEditProduct controller function base
