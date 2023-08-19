@@ -18,7 +18,7 @@
             </div>
             <div class="form-control">
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" step="0.01">
+                <input type="number" name="price" id="price" step="0.01" value="<% if (editing) { %><%= product.price %><% } %>">
             </div>
             <div class="form-control">
                 <label for="description">Description</label>
@@ -40,3 +40,4 @@
 <!-- s9-125:Add if statement on action. edit = true = edit product else addproduct-->
 <!-- s9-125:Add if statement on title edit=true=product.title else dont do anything -->
 <!-- s9-125:Add if statement on img edit=true=img else dont do anything -->
+<!-- s9-125:Add if statement on img edit=true=price else dont do anything -->
