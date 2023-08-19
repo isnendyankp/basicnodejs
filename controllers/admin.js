@@ -18,9 +18,11 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getEditProduct = (req, res, next) => {
+  const editMode = req.query.edit;
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
+    editing: editMode
   });
 };
 
@@ -40,3 +42,4 @@ exports.getProducts = (req, res, next) => {
 // - Pass in all new paramater on postAddProduct(title, imgUrl, price, description)
 // - s9-124:Change path res.render getAddProduct into edit-product
 // - s9-124:Cr8 getEditProduct controller function base
+// - s9-124:Cr8 editMode & call it on editing property
