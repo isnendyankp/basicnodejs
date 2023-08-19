@@ -22,6 +22,7 @@ exports.getEditProduct = (req, res, next) => {
   if (!editMode) {
     return res.redirect('/');
   }
+  const prodId = req.params.productId;
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
@@ -47,3 +48,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-124:Cr8 getEditProduct controller function base
 // - s9-124:Cr8 editMode & call it on editing property
 // - s9-124:Add check statement !editMode
+// - s9-124:Cr8 prodId for req params product id & get that id from the url
