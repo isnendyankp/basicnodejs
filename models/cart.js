@@ -27,6 +27,7 @@ module.exports = class Cart {
             updatedProduct.qty = updatedProduct.qty + 1;
         } else {
         updatedProduct = { id: id, qty: 1 };
+        cart.products = [...cart.products, updatedProduct];
         }
         cart.totalPrice = cart.totalPrice + productPrice;
       });
@@ -48,4 +49,5 @@ module.exports = class Cart {
 // - s9-123:cr8 updatedProduct for save new product
 // - s9-123:setup logic increase quantity on updateProduct
 // - s9-123:Add else conditional statement
-// - s9-123:Add argument productPrice 
+// - s9-123:Add argument productPrice
+// - s9-123:Add spread operator on updateProduct at else statement
