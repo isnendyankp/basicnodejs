@@ -42,7 +42,7 @@ exports.getCart = (req, res, next) => {
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
   Product.findById(prodId, product => {
-    
+    Cart.addProduct(prodId, product.price);
   });
   res.redirect('/cart');
 };
@@ -91,3 +91,4 @@ exports.getCheckout = (req, res, next) => {
 // - log prodId & res redirect cart
 // - s9-123:import cart models
 // - s9-123:cr8 function for find product by ID on postcart
+// - s9-123:Add callback to increase product to cart with 2 parameter: id & price
