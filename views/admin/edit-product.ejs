@@ -10,7 +10,7 @@
         <form class="product-form" action="/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>" method="POST">
             <div class="form-control">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title">
+                <input type="text" name="title" id="title" value="<% if (editing) { %><%= product.title %><% } %>">
             </div>
             <div class="form-control">
                 <label for="imageUrl">Image URL</label>
@@ -38,3 +38,4 @@
 <!-- Add 3 fetch data structure: img, price, description -->
 <!-- s9-125:Add if statement editing,update & Add -->
 <!-- s9-125:Add if statement on action. edit = true = edit product else addproduct-->
+<!-- s9-125:Add if statement on title edit=true=product.title else dont do anything -->
