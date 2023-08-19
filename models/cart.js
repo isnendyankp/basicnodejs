@@ -17,9 +17,10 @@ module.exports = class Cart {
           cart = JSON.parse(fileContent);
         }
         // Analyze the cart => Find existing product
-        const existingProduct = cart.products.find(
+        const existingProductIndex = cart.products.findIndex(
           prod => prod.id === id
         );
+        const existingProduct = cart.products[existingProductIndex];
          let updatedProduct;
         // Add new product/ increase quantity
         if (existingProduct) {
@@ -51,3 +52,4 @@ module.exports = class Cart {
 // - s9-123:Add else conditional statement
 // - s9-123:Add argument productPrice
 // - s9-123:Add spread operator on updateProduct at else statement
+// - s9-123:cr8 existingProductIndex for find existing product by index
