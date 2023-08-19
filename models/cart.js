@@ -9,7 +9,7 @@ const p = path.join(
 
 
 module.exports = class Cart {
-  static addProduct(id) {
+  static addProduct(id, productPrice) {
       // Fetch the previous cart
       fs.readFile(p, (err, fileContent) => {
         let cart = { products: [], totalPrice: 0 };
@@ -28,6 +28,7 @@ module.exports = class Cart {
         } else {
         updatedProduct = { id: id, qty: 1 };
         }
+        cart.totalPrice = cart.totalPrice + productPrice;
       });
   }
 }
@@ -47,3 +48,4 @@ module.exports = class Cart {
 // - s9-123:cr8 updatedProduct for save new product
 // - s9-123:setup logic increase quantity on updateProduct
 // - s9-123:Add else conditional statement
+// - s9-123:Add argument productPrice 
