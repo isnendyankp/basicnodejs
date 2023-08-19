@@ -1,4 +1,5 @@
 const Product = require('../models/product');
+const Cart = require('../models/cart');
 
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
@@ -86,3 +87,4 @@ exports.getCheckout = (req, res, next) => {
 // - cr8 base postCart controller function
 // - cr8 prodId for request body productId
 // - log prodId & res redirect cart
+// - import cart models
