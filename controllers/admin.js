@@ -24,12 +24,15 @@ exports.getEditProduct = (req, res, next) => {
   }
   const prodId = req.params.productId;
   Product.findById(prodId, product => {
-
-  });
-  res.render('admin/edit-product', {
-    pageTitle: 'Add Product',
-    path: '/admin/add-product',
-    editing: editMode
+    if (!product) {
+      return res.redirect('/');
+    }
+    res.render('admin/edit-product', {
+      pageTitle: 'Edit Product',
+      path: '/admin/edit-product',
+      editing: editMode,
+      product: product
+    });
   });
 };
 
@@ -53,3 +56,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-124:Add check statement !editMode
 // - s9-124:Cr8 prodId for req params product id & get that id from the url
 // - s9-125:Add findById on getEditProduct
+// - s9-125:Pass in product property include check statement
