@@ -22,7 +22,7 @@
             </div>
             <div class="form-control">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" rows="5"></textarea>
+                <textarea name="description" id="description" rows="5"><% if (editing) { %><%= product.description %><% } %></textarea>
             </div>
 
             <button class="btn" type="submit"><% if (editing) { %>Update Product<% } else { %>Add Product<% } %></button>
@@ -41,3 +41,4 @@
 <!-- s9-125:Add if statement on title edit=true=product.title else dont do anything -->
 <!-- s9-125:Add if statement on img edit=true=img else dont do anything -->
 <!-- s9-125:Add if statement on img edit=true=price else dont do anything -->
+<!-- s9-125:Add if statement on img edit=true=description else dont do anything -->
