@@ -4,6 +4,7 @@ exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
+    editing: false
   });
 };
 
@@ -57,3 +58,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-124:Cr8 prodId for req params product id & get that id from the url
 // - s9-125:Add findById on getEditProduct
 // - s9-125:Pass in product property include check statement
+// - s9-125:editing false for getAddProduct controller. this allow for edit controller success to run
