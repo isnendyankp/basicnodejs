@@ -25,6 +25,8 @@ module.exports = class Cart {
         if (existingProduct) {
             updatedProduct = { ...existingProduct };
             updatedProduct.qty = updatedProduct.qty + 1;
+        } else {
+        updatedProduct = { id: id, qty: 1 };
         }
       });
   }
@@ -44,3 +46,4 @@ module.exports = class Cart {
 // - s9-123:cr8 base statement for increase quatity
 // - s9-123:cr8 updatedProduct for save new product
 // - s9-123:setup logic increase quantity on updateProduct
+// - s9-123:Add else conditional statement
