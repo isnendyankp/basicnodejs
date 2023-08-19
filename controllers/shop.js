@@ -41,7 +41,9 @@ exports.getCart = (req, res, next) => {
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
-  console.log(prodId);
+  Product.findById(prodId, product => {
+    
+  });
   res.redirect('/cart');
 };
 
@@ -87,4 +89,5 @@ exports.getCheckout = (req, res, next) => {
 // - cr8 base postCart controller function
 // - cr8 prodId for request body productId
 // - log prodId & res redirect cart
-// - import cart models
+// - s9-123:import cart models
+// - s9-123:cr8 function for find product by ID on postcart
