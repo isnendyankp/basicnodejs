@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
-  res.render('admin/add-product', {
+  res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
     formsCSS: true,
@@ -34,3 +34,4 @@ exports.getProducts = (req, res, next) => {
 // - add fetchALl product & render view  on getProducts
 // - cr8 const structured for 4 paramter(title, imgUrl, price, description).
 // - Pass in all new paramater on postAddProduct(title, imgUrl, price, description)
+// - s9-124:Change path res.render getAddProduct into edit-product
