@@ -18,7 +18,8 @@ const getProductsFromFile = cb => {
 };
 
 module.exports = class Product {
-  constructor(title, imageUrl, description, price) {
+  constructor(id, title, imageUrl, description, price) {
+    this.id = id;
     this.title = title;
     this.imageUrl = imageUrl;
     this.description = description;
@@ -94,3 +95,4 @@ module.exports = class Product {
 // - Add getProductsFromFile funct for get data product
 // - cr8 function product to find product by id with p.id equal with id
 // - Add cb for execute product after find id
+// - s9-126:Add id on constructor
