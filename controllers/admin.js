@@ -37,6 +37,11 @@ exports.getEditProduct = (req, res, next) => {
   });
 };
 
+exports.postEditProduct = (req, res, next) => {
+  
+};
+
+
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
     res.render('admin/products', {
@@ -59,3 +64,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-125:Add findById on getEditProduct
 // - s9-125:Pass in product property include check statement
 // - s9-125:editing false for getAddProduct controller. this allow for edit controller success to run
+// - 
