@@ -33,6 +33,9 @@ module.exports = class Product {
           prod => prod.id === this.id);
           const updatedProducts = [...products];
           updatedProducts[existingProductIndex] = this;
+          fs.writeFile(p, JSON.stringify(updatedProducts), err => {
+          console.log(err);
+        });
       }
       this.id = Math.random().toString();
       products.push(this);
@@ -104,4 +107,5 @@ module.exports = class Product {
 // - s9-126:Add id on constructor
 // - s9-126:cr8 base if statement on save for checking id
 // - s9-127:update existing product with find product by id
-// - s9-127:replacing update product to existing product index 
+// - s9-127:replacing update product to existing product index
+// - s9-127:cr8 fs.writeFile for first statement
