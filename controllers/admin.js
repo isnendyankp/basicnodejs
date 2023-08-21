@@ -43,6 +43,13 @@ exports.postEditProduct = (req, res, next) => {
   const updatedPrice = req.body.price;
   const updatedImageUrl = req.body.imageUrl;
   const updatedDesc = req.body.description;
+  const updatedProduct = new Product(
+    prodId,
+    updatedTitle,
+    updatedImageUrl,
+    updatedDesc,
+    updatedPrice
+  );
 };
 
 
@@ -71,3 +78,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-126:Cr8 base postEditProduct controller
 // - s9-127:cr8 prodID accessing the request body on productId
 // - s9-127:Cr8 const all values edit product
+// - s9-127:All values into new product = updateProduct
