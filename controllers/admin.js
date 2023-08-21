@@ -39,6 +39,10 @@ exports.getEditProduct = (req, res, next) => {
 
 exports.postEditProduct = (req, res, next) => {
   const prodId = req.body.productId;
+  const updatedTitle = req.body.title;
+  const updatedPrice = req.body.price;
+  const updatedImageUrl = req.body.imageUrl;
+  const updatedDesc = req.body.description;
 };
 
 
@@ -66,3 +70,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-125:editing false for getAddProduct controller. this allow for edit controller success to run
 // - s9-126:Cr8 base postEditProduct controller
 // - s9-127:cr8 prodID accessing the request body on productId
+// - s9-127:Cr8 const all values edit product
