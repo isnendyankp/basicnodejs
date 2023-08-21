@@ -50,6 +50,7 @@ exports.postEditProduct = (req, res, next) => {
     updatedDesc,
     updatedPrice
   );
+  updatedProduct.save();
 };
 
 
@@ -79,3 +80,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-127:cr8 prodID accessing the request body on productId
 // - s9-127:Cr8 const all values edit product
 // - s9-127:All values into new product = updateProduct
+// - s9-127:save updateProduct for postEditProduct
