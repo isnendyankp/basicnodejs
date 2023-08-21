@@ -27,11 +27,12 @@ module.exports = class Product {
   }
 
   save() {
-    if (this.id) {
-      
-    }
-    this.id = Math.random().toString();
-    getProductsFromFile(products => {
+      getProductsFromFile(products => {
+      if (this.id) {
+        const existingProductIndex = products.findIndex(
+          prod => prod.id === this.id
+        );
+      this.id = Math.random().toString();
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), err => {
         console.log(err);
@@ -100,3 +101,4 @@ module.exports = class Product {
 // - Add cb for execute product after find id
 // - s9-126:Add id on constructor
 // - s9-126:cr8 base if statement on save for checking id
+// - s9-127:update existing product with find product by id
