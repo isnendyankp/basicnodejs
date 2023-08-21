@@ -27,6 +27,9 @@ module.exports = class Product {
   }
 
   save() {
+    if (this.id) {
+      
+    }
     this.id = Math.random().toString();
     getProductsFromFile(products => {
       products.push(this);
@@ -96,3 +99,4 @@ module.exports = class Product {
 // - cr8 function product to find product by id with p.id equal with id
 // - Add cb for execute product after find id
 // - s9-126:Add id on constructor
+// - s9-126:cr8 base if statement on save for checking id
