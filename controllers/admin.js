@@ -38,7 +38,7 @@ exports.getEditProduct = (req, res, next) => {
 };
 
 exports.postEditProduct = (req, res, next) => {
-  
+  const prodId = req.body.productId;
 };
 
 
@@ -65,3 +65,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-125:Pass in product property include check statement
 // - s9-125:editing false for getAddProduct controller. this allow for edit controller success to run
 // - s9-126:Cr8 base postEditProduct controller
+// - s9-127:cr8 prodID accessing the request body on productId
