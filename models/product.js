@@ -27,21 +27,23 @@ module.exports = class Product {
   }
 
   save() {
-      getProductsFromFile(products => {
+    getProductsFromFile(products => {
       if (this.id) {
-          const existingProductIndex = products.findIndex(
-          prod => prod.id === this.id);
-          const updatedProducts = [...products];
-          updatedProducts[existingProductIndex] = this;
-          fs.writeFile(p, JSON.stringify(updatedProducts), err => {
+        const existingProductIndex = products.findIndex(
+          prod => prod.id === this.id
+        );
+        const updatedProducts = [...products];
+        updatedProducts[existingProductIndex] = this;
+        fs.writeFile(p, JSON.stringify(updatedProducts), err => {
+          console.log(err);
+        });
+      } else {
+        this.id = Math.random().toString();
+        products.push(this);
+        fs.writeFile(p, JSON.stringify(products), err => {
           console.log(err);
         });
       }
-      this.id = Math.random().toString();
-      products.push(this);
-      fs.writeFile(p, JSON.stringify(products), err => {
-        console.log(err);
-      });
     });
   }
 
@@ -109,3 +111,4 @@ module.exports = class Product {
 // - s9-127:update existing product with find product by id
 // - s9-127:replacing update product to existing product index
 // - s9-127:cr8 fs.writeFile for first statement
+// - s9-127:setup else statement for save 
