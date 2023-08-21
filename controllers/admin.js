@@ -51,6 +51,7 @@ exports.postEditProduct = (req, res, next) => {
     updatedPrice
   );
   updatedProduct.save();
+  res.redirect('/admin/products');
 };
 
 
@@ -81,3 +82,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-127:Cr8 const all values edit product
 // - s9-127:All values into new product = updateProduct
 // - s9-127:save updateProduct for postEditProduct
+// - s9-127:Add res.redirect after save to admin product
