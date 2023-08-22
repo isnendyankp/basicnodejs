@@ -15,10 +15,12 @@ router.get('/products', adminController.getProducts);
 // /admin/add-product => POST
 router.post('/add-product', adminController.postAddProduct);
 
-// /admin/edit-product => edit
+// Admin/edit-product => edit
 router.get('/edit-product/:productId', adminController.getEditProduct);
-
+// Admin edit post
 router.post('/edit-product', adminController.postEditProduct);
+// Admin delete product
+router.post('/delete-product');
 
 module.exports = router;
 
@@ -34,3 +36,4 @@ module.exports = router;
 // - change controller path for getProducts
 // - s9-124:Cr8 route for getEditProduct controller
 // - s9-127:Fix Route for postEditProduct controller
+// - s9-128:Setup base Admin delete product Route
