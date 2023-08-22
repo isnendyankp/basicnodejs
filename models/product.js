@@ -47,6 +47,10 @@ module.exports = class Product {
     });
   }
 
+  static deleteById(id) {
+
+  }
+
   static fetchAll(cb) {
     getProductsFromFile(cb);
   }
@@ -111,4 +115,5 @@ module.exports = class Product {
 // - s9-127:update existing product with find product by id
 // - s9-127:replacing update product to existing product index
 // - s9-127:cr8 fs.writeFile for first statement
-// - s9-127:setup else statement for save 
+// - s9-127:setup else statement for save
+// - s9-128:cr8 static deleteby id method base
