@@ -65,6 +65,9 @@ exports.getProducts = (req, res, next) => {
   });
 };
 
+exports.postDeleteProduct = (req, res, next) => {
+  
+};
 // - cr8 new controller getProducts base function midleware
 // - add fetchALl product & render view  on getProducts
 // - cr8 const structured for 4 paramter(title, imgUrl, price, description).
@@ -83,3 +86,4 @@ exports.getProducts = (req, res, next) => {
 // - s9-127:All values into new product = updateProduct
 // - s9-127:save updateProduct for postEditProduct
 // - s9-127:Add res.redirect after save to admin product
+// - s9-128:Cr8 base postDeleteProduct controller
