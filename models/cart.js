@@ -37,6 +37,10 @@ module.exports = class Cart {
       });
     });
   }
+
+  static deleteProduct(id) {
+
+  }
 };
 
 // - cr8 class cart model base
@@ -59,3 +63,4 @@ module.exports = class Cart {
 // - s9-123:cr8 existingProductIndex for find existing product by index
 // - s9-123:Add cart.products after updateProduct in array
 // - s9-123:cr8 fs.writeFile function with 3 parameter: p for path, JSON.stringify(cart) for change object cart into string JSON and callback function for error
+// - s9-129:Cr8 Delete method cart models
