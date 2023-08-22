@@ -50,6 +50,7 @@ module.exports = class Product {
   static deleteById(id) {
     getProductsFromFile(products => {
       const updatedProducts = products.filter(prod => prod.id !== id);
+      fs.writeFile(p, JSON.stringify(updatedProducts));
     });
   }
 
@@ -120,3 +121,4 @@ module.exports = class Product {
 // - s9-127:setup else statement for save
 // - s9-128:cr8 static deleteby id method base
 // - s9-128:Add filter method for delete by id  as a argument
+// - s9-128:Add fs.writeFile for updateProducts
