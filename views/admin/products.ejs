@@ -29,6 +29,7 @@
                             <div class="card__actions">
                                     <a href="/admin/edit-product/<%= product.id %>?edit=true" class="btn">Edit</a>
                                     <form action="/admin/delete-product" method="POST">
+                                        <input type="hidden" value="<%= product.id %>" name="productId">
                                         <button class="btn" type="submit">Delete</button>
                                     </form>
                             </div>
@@ -47,3 +48,4 @@
 <!-- Add link for edit button -->
 <!-- Add form & method post for button delete -->
 <!-- s9-125:Fix link to edit page, make it edit = true-->
+<!-- s9-128:Cr8 hidden input at delete with value product.id -->
