@@ -43,6 +43,8 @@ module.exports = class Cart {
       if (err) {
         return;
       }
+      const updatedCart = { ...JSON.parse(fileContent) };
+      const product = updatedCart.products.find(prod => prod.id === id);
     });
   }
 };
@@ -69,3 +71,5 @@ module.exports = class Cart {
 // - s9-123:cr8 fs.writeFile function with 3 parameter: p for path, JSON.stringify(cart) for change object cart into string JSON and callback function for error
 // - s9-129:Cr8 Delete method cart models
 // - s9-129:Add readfile to get cart inculde error statement
+// - s9-129:UpdateCart if no error
+// - s9-129:find updatedCart with findindex method 
