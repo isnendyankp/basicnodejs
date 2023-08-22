@@ -38,8 +38,12 @@ module.exports = class Cart {
     });
   }
 
-  static deleteProduct(id) {
-
+  static deleteProduct(id, productPrice) {
+    fs.readFile(p, (err, fileContent) => {
+      if (err) {
+        return;
+      }
+    });
   }
 };
 
@@ -64,3 +68,4 @@ module.exports = class Cart {
 // - s9-123:Add cart.products after updateProduct in array
 // - s9-123:cr8 fs.writeFile function with 3 parameter: p for path, JSON.stringify(cart) for change object cart into string JSON and callback function for error
 // - s9-129:Cr8 Delete method cart models
+// - s9-129:Add readfile to get cart inculde error statement
