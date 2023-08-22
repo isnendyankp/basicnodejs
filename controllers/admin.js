@@ -66,7 +66,7 @@ exports.getProducts = (req, res, next) => {
 };
 
 exports.postDeleteProduct = (req, res, next) => {
-  
+  const prodId = req.body.productId;
 };
 // - cr8 new controller getProducts base function midleware
 // - add fetchALl product & render view  on getProducts
@@ -87,3 +87,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - s9-127:save updateProduct for postEditProduct
 // - s9-127:Add res.redirect after save to admin product
 // - s9-128:Cr8 base postDeleteProduct controller
+// - s9-128:extract product id from request body by accessing prodID
