@@ -50,6 +50,10 @@ module.exports = class Cart {
         prod => prod.id !== id
       );
       updatedCart.totalPrice= cart.totalPrice - productPrice * productQty
+
+      fs.writeFile(p, JSON.stringify(updatedCart), err => {
+        console.log(err);
+      });
     });
   }
 };
@@ -80,4 +84,4 @@ module.exports = class Cart {
 // - s9-129:find updatedCart with findindex method
 // - s9-129:find product quantity
 // - s9-129:Add method to know cart total price
-// - 
+// - s9-129:Add writeFile & store updatedCart
