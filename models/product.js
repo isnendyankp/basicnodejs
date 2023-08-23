@@ -54,7 +54,7 @@ module.exports = class Product {
       const updatedProducts = products.filter(prod => prod.id !== id);
       fs.writeFile(p, JSON.stringify(updatedProducts));
       if (!err) {
-         
+         Cart.deleteProduct(id);
         }
     });
   }
@@ -129,3 +129,4 @@ module.exports = class Product {
 // - s9-128:Add fs.writeFile for updateProducts
 // - s9-129:Add if statement error base on delete
 // - s9-129:Import cart
+// - s9-129:Call cart delete product & pass in ID
