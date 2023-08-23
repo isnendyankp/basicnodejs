@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const Cart = require('./cart');
+
 const p = path.join(
   path.dirname(process.mainModule.filename),
   'data',
@@ -126,3 +128,4 @@ module.exports = class Product {
 // - s9-128:Add filter method for delete by id  as a argument
 // - s9-128:Add fs.writeFile for updateProducts
 // - s9-129:Add if statement error base on delete
+// - s9-129:Import cart
