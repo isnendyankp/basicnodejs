@@ -67,6 +67,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
+  Product.deleteById(prodId);
 };
 // - cr8 new controller getProducts base function midleware
 // - add fetchALl product & render view  on getProducts
@@ -88,3 +89,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - s9-127:Add res.redirect after save to admin product
 // - s9-128:Cr8 base postDeleteProduct controller
 // - s9-128:extract product id from request body by accessing prodID
+// - s9-129:Use product then delete by id & pass prodId
