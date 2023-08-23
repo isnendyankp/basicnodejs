@@ -46,7 +46,10 @@ module.exports = class Cart {
       const updatedCart = { ...JSON.parse(fileContent) };
       const product = updatedCart.products.find(prod => prod.id === id);
       const productQty = product.qty;
-      cart.totalPrice= cart.totalPrice - productPrice * productQty
+      updatedCart.products = updatedCart.products.filter(
+        prod => prod.id !== id
+      );
+      updatedCart.totalPrice= cart.totalPrice - productPrice * productQty
     });
   }
 };
@@ -77,3 +80,4 @@ module.exports = class Cart {
 // - s9-129:find updatedCart with findindex method
 // - s9-129:find product quantity
 // - s9-129:Add method to know cart total price
+// - 
