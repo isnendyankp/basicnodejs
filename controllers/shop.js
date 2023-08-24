@@ -63,6 +63,9 @@ exports.postCart = (req, res, next) => {
 
 exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
+  Product.findById(prodId, product => {
+
+  });
 };
 
 exports.getOrders = (req, res, next) => {
@@ -119,3 +122,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-130:Fix getCart controller
 // - s9-131:Cr8 base postCartDeleteProduct controller
 // - s9-131:Extra product ID fro req body prodcut ID on postCartDeleteProduct controller
+// - s9-131:Add Product.findById for find information by id on postCartDeleteProduct controller
