@@ -7,7 +7,9 @@
            <% if (products.length > 0) { %>
                 <ul>
                     <% products.forEach(p => { %>
-                        
+                        <li>
+                            <p><%= p.productData.title %> </p>
+                        </li>
                     <% }) %>
                 </ul>
             <% } else { %>
@@ -20,3 +22,4 @@
 <!-- Add main structure -->
 <!-- s9-130: Add if statement structure -->
 <!-- s9-130:Add render ul for loop all products -->
+<!-- s9-130: Add output p.product data for allow title -->
