@@ -112,4 +112,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-130:Add Product.fetchAll inside cb function on getCart
 // - s9-130:Add product cb funct inside Product.fetchAll
 // - s9-130:Fix cb Product.fetchAll on getCart
-// - 
+// - s9-130:Fix getCart controller

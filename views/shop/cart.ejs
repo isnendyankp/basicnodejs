@@ -4,9 +4,14 @@
     <body>
         <%- include('../includes/navigation.ejs') %>
         <main>
-           
+           <% if (products.length > 0) { %>
+
+            <% } else { %>
+                <h1>No Products in Cart!</h1>
+            <% } %>
         </main>
         <%- include('../includes/end.ejs') %>
 
 <!-- cr8 Structure & add ejs expression on cart -->
 <!-- Add main structure -->
+<!-- s9-130: Add if statement structure -->
