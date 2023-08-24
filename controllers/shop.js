@@ -33,6 +33,7 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getCart = (req, res, next) => {
+  Cart.getCart();
   res.render('shop/cart', {
     path: '/cart',
     pageTitle: 'Your Cart'
@@ -92,3 +93,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-123:import cart models
 // - s9-123:cr8 function for find product by ID on postcart
 // - s9-123:Add callback to increase product to cart with 2 parameter: id & price
+// - s9-130:Add call Cart.getCart on getCart
