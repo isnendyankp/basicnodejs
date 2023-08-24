@@ -8,7 +8,7 @@
                 <ul>
                     <% products.forEach(p => { %>
                         <li>
-                            <p><%= p.productData.title %> </p>
+                            <p><%= p.productData.title %> (<%= p.qty %>)</p>
                         </li>
                     <% }) %>
                 </ul>
@@ -23,3 +23,4 @@
 <!-- s9-130: Add if statement structure -->
 <!-- s9-130:Add render ul for loop all products -->
 <!-- s9-130: Add output p.product data for allow title -->
+<!-- s9-130: Access p.quantity -->
