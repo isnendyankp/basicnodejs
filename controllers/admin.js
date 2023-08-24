@@ -13,7 +13,7 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
-  const product = new Product(title, imageUrl, description, price);
+  const product = new Product(null, title, imageUrl, description, price);
   product.save();
   res.redirect('/');
 };
@@ -54,7 +54,6 @@ exports.postEditProduct = (req, res, next) => {
   res.redirect('/admin/products');
 };
 
-
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
     res.render('admin/products', {
@@ -70,6 +69,7 @@ exports.postDeleteProduct = (req, res, next) => {
   Product.deleteById(prodId);
   res.redirect('/admin/products');
 };
+
 // - cr8 new controller getProducts base function midleware
 // - add fetchALl product & render view  on getProducts
 // - cr8 const structured for 4 paramter(title, imgUrl, price, description).
@@ -92,3 +92,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - s9-128:extract product id from request body by accessing prodID
 // - s9-129:Use product then delete by id & pass prodId
 // - s9-129:Add res.redirect to admin products on postDeleteProduct Controller
+// - s9-132:Fix postAddproduct Controller with Add null
