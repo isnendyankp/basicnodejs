@@ -5,7 +5,11 @@
         <%- include('../includes/navigation.ejs') %>
         <main>
            <% if (products.length > 0) { %>
-
+                <ul>
+                    <% products.forEach(p => { %>
+                        
+                    <% }) %>
+                </ul>
             <% } else { %>
                 <h1>No Products in Cart!</h1>
             <% } %>
@@ -15,3 +19,4 @@
 <!-- cr8 Structure & add ejs expression on cart -->
 <!-- Add main structure -->
 <!-- s9-130: Add if statement structure -->
+<!-- s9-130:Add render ul for loop all products -->
