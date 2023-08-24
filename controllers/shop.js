@@ -34,10 +34,20 @@ exports.getIndex = (req, res, next) => {
 
 exports.getCart = (req, res, next) => {
   Cart.getCart(cart => {
-      Product.fetchAll(product =>{
+    Product.fetchAll(products => {
+      const cartProducts = [];
+      for (product of products) {
+        const cartProductData = cart.products.find(
+          prod => prod.id === product.id
+        );
+        if (cartProductData) {
+          cartProducts.push({ productData: product, qty: cartProductData.qty });
+        }
+      }
       res.render('shop/cart', {
         path: '/cart',
-        pageTitle: 'Your Cart'
+        pageTitle: 'Your Cart',
+        products: cartProducts
       });
     });
   });
@@ -102,3 +112,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-130:Add Product.fetchAll inside cb function on getCart
 // - s9-130:Add product cb funct inside Product.fetchAll
 // - s9-130:Fix cb Product.fetchAll on getCart
+// - 
