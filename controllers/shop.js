@@ -61,6 +61,10 @@ exports.postCart = (req, res, next) => {
   res.redirect('/cart');
 };
 
+exports.postCartDeleteProduct = (req, res, next) => {
+  
+};
+
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', {
     path: '/orders',
@@ -113,3 +117,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-130:Add product cb funct inside Product.fetchAll
 // - s9-130:Fix cb Product.fetchAll on getCart
 // - s9-130:Fix getCart controller
+// - s9-131:Cr8 base postCartDeleteProduct controller
