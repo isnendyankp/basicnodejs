@@ -16,6 +16,8 @@ router.get('/cart', shopController.getCart);
 
 router.post('/cart', shopController.postCart);
 
+router.post('/cart-delete-item');
+
 router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
@@ -44,3 +46,4 @@ module.exports = router;
 // - cr8 base dynamic params segment the ID
 // - Fix route path shopController to getProduct function
 // - cr8 route post for postCart controller function
+// - s9-131:Setup route for delete item 
