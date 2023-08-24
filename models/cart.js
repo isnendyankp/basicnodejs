@@ -60,7 +60,11 @@ module.exports = class Cart {
   static getCart(cb) {
     fs.readFile(p, (err, fileContent) => {
       const cart = JSON.parse(fileContent);
-          
+      if (err) {
+        cb(null);
+      } else {
+        cb(cart);
+      }
     });
   }
 };
@@ -95,4 +99,5 @@ module.exports = class Cart {
 // - s9-130:cr8 base static to get all product in a cart
 // - s9-130:Add fs.readfile
 // - s9-130:Cr8 cart equal to JSON.parse(fileContent)
-// - 
+// - s9-130:Change method name to getCart
+// - s9-130:Add if statement include cb for cart
