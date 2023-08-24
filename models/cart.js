@@ -56,6 +56,10 @@ module.exports = class Cart {
       });
     });
   }
+
+  static getProducts() {
+
+  }
 };
 
 // - cr8 class cart model base
@@ -85,3 +89,4 @@ module.exports = class Cart {
 // - s9-129:find product quantity
 // - s9-129:Add method to know cart total price
 // - s9-129:Add writeFile & store updatedCart
+// - s9-130:cr8 base static to get all product in a cart
