@@ -57,8 +57,11 @@ module.exports = class Cart {
     });
   }
 
-  static getProducts() {
-
+  static getProducts(cb) {
+    fs.readFile(p, (err, fileContent) => {
+      
+          
+    });
   }
 };
 
@@ -90,3 +93,4 @@ module.exports = class Cart {
 // - s9-129:Add method to know cart total price
 // - s9-129:Add writeFile & store updatedCart
 // - s9-130:cr8 base static to get all product in a cart
+// - s9-130:Add fs.readfile
