@@ -34,6 +34,7 @@ exports.getIndex = (req, res, next) => {
 
 exports.getCart = (req, res, next) => {
   Cart.getCart(cart => {
+      Product.fetchAll();
       res.render('shop/cart', {
       path: '/cart',
       pageTitle: 'Your Cart'
@@ -97,3 +98,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-130:Add call Cart.getCart on getCart
 // - s9-130:Add call back function cart on getCart
 // - s9-130:Move render view inside cb function on getCart
+// - s9-130:Add Product.fetchAll inside cb function on getCart
