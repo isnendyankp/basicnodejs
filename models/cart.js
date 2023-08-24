@@ -59,7 +59,7 @@ module.exports = class Cart {
 
   static getProducts(cb) {
     fs.readFile(p, (err, fileContent) => {
-      
+      const cart = JSON.parse(fileContent);
           
     });
   }
@@ -94,3 +94,4 @@ module.exports = class Cart {
 // - s9-129:Add writeFile & store updatedCart
 // - s9-130:cr8 base static to get all product in a cart
 // - s9-130:Add fs.readfile
+// - s9-130:Cr8 cart equal to JSON.parse(fileContent)
