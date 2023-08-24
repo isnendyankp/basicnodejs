@@ -45,11 +45,15 @@ module.exports = class Cart {
       }
       const updatedCart = { ...JSON.parse(fileContent) };
       const product = updatedCart.products.find(prod => prod.id === id);
+      if (!product) {
+          return;
+      }
       const productQty = product.qty;
       updatedCart.products = updatedCart.products.filter(
         prod => prod.id !== id
       );
-      updatedCart.totalPrice= cart.totalPrice - productPrice * productQty
+      updatedCart.totalPrice =
+        updatedCart.totalPrice - productPrice * productQty;
 
       fs.writeFile(p, JSON.stringify(updatedCart), err => {
         console.log(err);
@@ -101,3 +105,4 @@ module.exports = class Cart {
 // - s9-130:Cr8 cart equal to JSON.parse(fileContent)
 // - s9-130:Change method name to getCart
 // - s9-130:Add if statement include cb for cart
+// - s9-132:Fixing Delete Product with add if statement !product & give return
