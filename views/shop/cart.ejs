@@ -10,6 +10,7 @@
                         <li>
                             <p><%= p.productData.title %> (<%= p.qty %>)</p>
                             <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" value="<%= p.productData.id %>" name="productId">
                                 <button class="btn" type="submit">Delete</button>
                             </form>
                         </li>
@@ -29,3 +30,4 @@
 <!-- s9-130: Access p.quantity -->
 <!-- s9-131: Add form with method post -->
 <!-- s9-131: Add button with type submit for delete -->
+<!-- s9-131:Add hidden value input with value p.productData.id -->
