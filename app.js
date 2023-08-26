@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 // const expressHbs = require('express-handlebars');
 
 const errorController = require('./controllers/error');
+const db = require('./util/database');
 
 const app = express();
 
@@ -57,3 +58,4 @@ app.listen(3000);
 // - move 404 controller function middleware to error.js
 // - import errorController
 // - pass in errorController to app.use
+// - S10-140:Import database
