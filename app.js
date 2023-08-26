@@ -20,6 +20,8 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
+db.execute();
+
 // install npm install --save body-parser for parsing
 // URL encoding is the process of converting non-alphanumeric characters into a computer-understandable representation of a URL.
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -59,3 +61,4 @@ app.listen(3000);
 // - import errorController
 // - pass in errorController to app.use
 // - S10-140:Import database
+// - S10-140:Add db.execute base which allow to use database
