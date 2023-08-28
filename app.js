@@ -21,9 +21,9 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 db.execute('SELECT * FROM products')
-    .then(() => {
-
-    })
+    .then(result => {
+    console.log(result);
+  })
     .catch(err => {
     console.log(err);
     });
@@ -70,4 +70,5 @@ app.listen(3000);
 // - S10-140:Add db.execute base which allow to use database
 // - S10-140:Add accessing tables product from mysql
 // - S10-141:Execute db with 2 function promises then & catch
-// - 
+// - S10-142:Add argument err in funct catch & log err
+// - S10-142:Add argument result in funct then & log result
