@@ -22,8 +22,8 @@ const shopRoutes = require('./routes/shop');
 
 db.execute('SELECT * FROM products')
     .then(result => {
-    console.log(result);
-  })
+    console.log(result[0], result[1]);
+    })
     .catch(err => {
     console.log(err);
     });
@@ -72,3 +72,4 @@ app.listen(3000);
 // - S10-141:Execute db with 2 function promises then & catch
 // - S10-142:Add argument err in funct catch & log err
 // - S10-142:Add argument result in funct then & log result
+// - S10-142:Edit log result(array with 2 nested element)
