@@ -23,13 +23,14 @@ exports.getProduct = (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
-  Product.fetchAll(products => {
+  Product.fetchAll()
+    .then()
+    .catch(err => console.log(err));
     res.render('shop/index', {
       prods: products,
       pageTitle: 'Shop',
       path: '/'
     });
-  });
 };
 
 exports.getCart = (req, res, next) => {
@@ -126,3 +127,4 @@ exports.getCheckout = (req, res, next) => {
 // - s9-131:Add Product.findById for find information by id on postCartDeleteProduct controller
 // - s9-131:Add Cart.deleteProduct on postCartDeleteProduct controller
 // - s9-131:Add redirect request back to cart on postCartDeleteProduct controller
+// - S10-143:Add then & catch method promise on getIndex controller
