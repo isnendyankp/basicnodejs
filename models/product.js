@@ -89,4 +89,5 @@ module.exports = class Product {
 // - s9-129:Import cart
 // - s9-129:Call cart delete product & pass in ID
 // - s9-129:Pass in product.price at deleteProduct method
-// - S10-142:Setup for fetching data from db (remove useless code) 
+// - S10-142:Setup for fetching data from db (remove useless code)
+// - S10-142:Import db 
