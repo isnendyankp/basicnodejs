@@ -24,13 +24,14 @@ exports.getProduct = (req, res, next) => {
 
 exports.getIndex = (req, res, next) => {
   Product.fetchAll()
-    .then(([rows, fieldData]) => {})
+    .then(([rows, fieldData]) => {
+      res.render('shop/index', {
+        prods: products,
+        pageTitle: 'Shop',
+        path: '/'
+      });
+    })
     .catch(err => console.log(err));
-    res.render('shop/index', {
-      prods: products,
-      pageTitle: 'Shop',
-      path: '/'
-    });
 };
 
 exports.getCart = (req, res, next) => {
@@ -130,3 +131,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-143:Add then & catch method promise on getIndex controller
 // - S10-143:Add anonymous function in then method for getIndex
 // - S10-143:Add rows & fieldData element on then for getIndex controller
+// - S10-143:move render to anonymous funct on then
