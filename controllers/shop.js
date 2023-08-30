@@ -26,7 +26,7 @@ exports.getIndex = (req, res, next) => {
   Product.fetchAll()
     .then(([rows, fieldData]) => {
       res.render('shop/index', {
-        prods: products,
+        prods: rows,
         pageTitle: 'Shop',
         path: '/'
       });
@@ -132,3 +132,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-143:Add anonymous function in then method for getIndex
 // - S10-143:Add rows & fieldData element on then for getIndex controller
 // - S10-143:move render to anonymous funct on then
+// - S10-143change products to rows (bcz rows to entries product table)
