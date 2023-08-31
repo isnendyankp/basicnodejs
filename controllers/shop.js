@@ -2,13 +2,15 @@ const Product = require('../models/product');
 const Cart = require('../models/cart');
 
 exports.getProducts = (req, res, next) => {
-  Product.fetchAll(products => {
-    res.render('shop/product-list', {
-      prods: products,
-      pageTitle: 'All Products',
-      path: '/products'
-    });
-  });
+  Product.fetchAll()
+   .then(([rows, fieldData]) => {
+      res.render('shop/index', {
+        prods: rows,
+        pageTitle: 'Shop',
+        path: '/'
+      });
+    })
+    .catch(err => console.log(err));
 };
 
 exports.getProduct = (req, res, next) => {
@@ -133,3 +135,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-143:Add rows & fieldData element on then for getIndex controller
 // - S10-143:move render to anonymous funct on then
 // - S10-143change products to rows (bcz rows to entries product table)
+// - S10-143: add then & catch on getProduct controller
