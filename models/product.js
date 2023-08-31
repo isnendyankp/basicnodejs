@@ -12,7 +12,7 @@ module.exports = class Product {
   }
 
   save() {
-    db.execute();
+    db.execute('INSERT INTO products (title, price, imageUrl, description)');
   }
 
   static deleteById(id) {
@@ -93,3 +93,4 @@ module.exports = class Product {
 // - S10-142:Import db
 // - S10-142:Access db on fetcthAll
 // - S10-144: Add db.execute on save(this function for execute SQL commands in the database. )
+// - S10-145: Add SQL statement (this is a SQL statement intended to insert data into the products table.)
