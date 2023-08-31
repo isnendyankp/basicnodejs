@@ -14,7 +14,7 @@ exports.postAddProduct = (req, res, next) => {
   const price = req.body.price;
   const description = req.body.description;
   const product = new Product(null, title, imageUrl, description, price);
-  product.save();
+  product.save().then().catch(err => console.log(err));
   res.redirect('/');
 };
 
@@ -93,3 +93,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - s9-129:Use product then delete by id & pass prodId
 // - s9-129:Add res.redirect to admin products on postDeleteProduct Controller
 // - s9-132:Fix postAddproduct Controller with Add null
+// - S10-145:Add then & catch err for save postAddProduct Controller
