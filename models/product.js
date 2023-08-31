@@ -12,7 +12,7 @@ module.exports = class Product {
   }
 
   save() {
-   
+    db.execute();
   }
 
   static deleteById(id) {
@@ -91,4 +91,5 @@ module.exports = class Product {
 // - s9-129:Pass in product.price at deleteProduct method
 // - S10-142:Setup for fetching data from db (remove useless code)
 // - S10-142:Import db
-// - S10-142:Access db on fetcthAll 
+// - S10-142:Access db on fetcthAll
+// - S10-144: Add db.execute on save(this function for execute SQL commands in the database. )
