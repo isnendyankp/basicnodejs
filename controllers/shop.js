@@ -3,11 +3,11 @@ const Cart = require('../models/cart');
 
 exports.getProducts = (req, res, next) => {
   Product.fetchAll()
-   .then(([rows, fieldData]) => {
-     res.render('shop/product-list', {
+    .then(([rows, fieldData]) => {
+      res.render('shop/product-list', {
         prods: rows,
-        pageTitle: 'Shop',
-        path: '/'
+        pageTitle: 'All Products',
+        path: '/products'
       });
     })
     .catch(err => console.log(err));
@@ -137,3 +137,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-143change products to rows (bcz rows to entries product table)
 // - S10-144: add then & catch on getProduct controller
 // - S10-144: Change res.render to shop/prod list
+// - S10-144: Change pageTitle & path on getProducts
