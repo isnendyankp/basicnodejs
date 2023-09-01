@@ -27,7 +27,7 @@ module.exports = class Product {
   }
 
   static findById(id) {
-    db.execute('SELECT * FROM products WHERE products.id = ?', [id]);
+    return db.execute('SELECT * FROM products WHERE products.id = ?', [id]);
   }
 };
 
@@ -102,3 +102,4 @@ module.exports = class Product {
 // - S10-145:Add db.execute for findById
 // - S10-145:Add SQL commands to retrieve all data products
 // - S10-145:Add WHERE condition. if the id value matches the given parameters. The "id" parameter is used to filter data taken from the "products" table.
+// - S10-145:Add return for db.execute at finById
