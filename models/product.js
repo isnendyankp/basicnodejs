@@ -27,7 +27,7 @@ module.exports = class Product {
   }
 
   static findById(id) {
-    
+    db.execute();
   }
 };
 
@@ -99,3 +99,4 @@ module.exports = class Product {
 // - S10-145: Add SQL statement (this is a SQL statement intended to insert data into the products table.)
 // - S10-145: Add VALUE with placeholder symbol to prevent SQL injection attacks.
 // - S10-145: Allow insert all elemnt with 2nd Argumnt
+// - S10-145:Add db.execute for findById
