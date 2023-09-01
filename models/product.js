@@ -27,7 +27,7 @@ module.exports = class Product {
   }
 
   static findById(id) {
-    db.execute();
+    db.execute('SELECT * FROM products');
   }
 };
 
@@ -100,3 +100,4 @@ module.exports = class Product {
 // - S10-145: Add VALUE with placeholder symbol to prevent SQL injection attacks.
 // - S10-145: Allow insert all elemnt with 2nd Argumnt
 // - S10-145:Add db.execute for findById
+// - S10-145:Add SQL commands to retrieve all data products
