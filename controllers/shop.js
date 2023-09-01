@@ -15,13 +15,14 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById(prodId, product => {
+  Product.findById(prodId).then().catch(err => console.log(err));
+  product => {
     res.render('shop/product-detail', {
       product: product,
       pageTitle: product.title,
       path: '/products'
     });
-  });
+  }
 };
 
 exports.getIndex = (req, res, next) => {
@@ -138,3 +139,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-144: add then & catch on getProduct controller
 // - S10-144: Change res.render to shop/prod list
 // - S10-144: Change pageTitle & path on getProducts
+// - S10-146:Add then & catch err on getProduct controller
