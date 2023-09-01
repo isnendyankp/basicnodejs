@@ -15,7 +15,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById(prodId).then().catch(err => console.log(err));
+  Product.findById(prodId).then(([product])).catch(err => console.log(err));
   product => {
     res.render('shop/product-detail', {
       product: product,
@@ -140,3 +140,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-144: Change res.render to shop/prod list
 // - S10-144: Change pageTitle & path on getProducts
 // - S10-146:Add then & catch err on getProduct controller
+// - S10-146:Add product param on then
