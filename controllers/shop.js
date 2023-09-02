@@ -17,9 +17,8 @@ exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId)
     .then(([product]) => {
-      console.log(product);
       res.render('shop/product-detail', {
-        product: product,
+        product: product[0],
         pageTitle: product.title,
         path: '/products'
       });
@@ -145,3 +144,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-146:Add product param on then
 // - S10-146:move res.render into then @getProduct
 // - S10-146:checking log for failed detail click
+// - S10-146:Add first element [0] for bug detail inthat array
