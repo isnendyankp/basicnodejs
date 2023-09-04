@@ -9,7 +9,9 @@
 
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27');
+const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27', {
+
+});
 
 // - S10-140:Cr8 database.js file & import mysql
 // - S10-140:Cr8 base for mysql.createPool
@@ -18,3 +20,4 @@ const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27');
 // - S11-151: remove mysql2 connect for setup Sequelize
 // - S11-151: cr8 sequelize instant with call Sequelize
 // - S11-151: Add schema name, username, pass on Sequelize
+// - S11-151: Add four argument an option object base
