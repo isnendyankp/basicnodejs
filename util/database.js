@@ -10,7 +10,8 @@
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27', {
-    dialect: 'mysql'
+    dialect: 'mysql',
+    host: 'localhost'
 });
 
 // - S10-140:Cr8 database.js file & import mysql
@@ -22,3 +23,4 @@ const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27', {
 // - S11-151: Add schema name, username, pass on Sequelize
 // - S11-151: Add four argument an option object base
 // - S11-151: Add dialect option object
+// - S11-151: Add host option object
