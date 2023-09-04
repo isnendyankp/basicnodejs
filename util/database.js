@@ -14,6 +14,8 @@ const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27', {
     host: 'localhost'
 });
 
+module.exports = sequelize;
+
 // - S10-140:Cr8 database.js file & import mysql
 // - S10-140:Cr8 base for mysql.createPool
 // - S10-140:Add information for pool
@@ -24,3 +26,4 @@ const sequelize = new Sequelize('node-complete', 'root', '#Semogasukses27', {
 // - S11-151: Add four argument an option object base
 // - S11-151: Add dialect option object
 // - S11-151: Add host option object
+// - S11-151: export sequelize
