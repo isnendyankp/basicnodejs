@@ -4,7 +4,7 @@ const sequelize = require('../util/database');
 
 const Product = sequelize.define('product',{
     id: {
-    
+        type: Sequelize.INTEGER
     },
 });
 
@@ -14,3 +14,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Add product as a module name
 // - S11-152:Setup second argument for structure
 // - S11-152:Setup base id as a property
+// - S11-152:Add type data for id property
