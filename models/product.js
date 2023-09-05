@@ -5,7 +5,8 @@ const sequelize = require('../util/database');
 const Product = sequelize.define('product',{
     id: {
         type: Sequelize.INTEGER,
-        autoIncrement: true
+        autoIncrement: true,
+        allowNull: false
     },
 });
 
@@ -17,3 +18,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Setup base id as a property
 // - S11-152:Add type data for id property
 // - S11-152:Add autoIncrement for automatically increase every time a new product is added to the database.
+// - S11-152:Add allowNull false for indicates that the value of the 'id' column will be automatically incremented every time a new product is added to the database.
