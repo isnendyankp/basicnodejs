@@ -10,6 +10,9 @@ const Product = sequelize.define('product',{
         primaryKey: true
     },
     title: Sequelize.STRING
+    price: {
+
+    }
 });
 
 // - S11-152:cr8 Sequelize for import sequelize
@@ -23,3 +26,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Add allowNull false for indicates that the value of the 'id' column will be automatically incremented every time a new product is added to the database.
 // - S11-152:Add primaryKey true for used to uniquely identify each entity in the products table. By providing the id attribute as the primary key, Sequelize will manage it specifically in database operations.
 // - S11-152:Add title property  with type data string
+// - S11-152:Add price property object base
