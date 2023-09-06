@@ -9,9 +9,9 @@ const Product = sequelize.define('product',{
         allowNull: false,
         primaryKey: true
     },
-    title: Sequelize.STRING
+    title: Sequelize.STRING,
     price: {
-
+        type: Sequelize.DOUBLE
     }
 });
 
@@ -27,3 +27,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Add primaryKey true for used to uniquely identify each entity in the products table. By providing the id attribute as the primary key, Sequelize will manage it specifically in database operations.
 // - S11-152:Add title property  with type data string
 // - S11-152:Add price property object base
+// - S11-152:Add type price property
