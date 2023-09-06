@@ -11,7 +11,8 @@ const Product = sequelize.define('product',{
     },
     title: Sequelize.STRING,
     price: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
+        allowNull: false
     }
 });
 
@@ -28,3 +29,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Add title property  with type data string
 // - S11-152:Add price property object base
 // - S11-152:Add type price property
+// - S11-152:Add allowNull price property
