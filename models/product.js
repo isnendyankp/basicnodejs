@@ -15,7 +15,8 @@ const Product = sequelize.define('product',{
         allowNull: false
     },
     imageUrl: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
     }
 });
 
@@ -35,3 +36,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Add allowNull price property
 // - S11-152:Add imageUrl property object base
 // - S11-152:Add type imageUrl property
+// - S11-152:Add allowNull imageUrl property
