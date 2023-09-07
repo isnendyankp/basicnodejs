@@ -19,7 +19,7 @@ const Product = sequelize.define('product',{
         allowNull: false
     },
     description: {
-    
+        type: Sequelize.STRING
     }
 });
 
@@ -41,3 +41,4 @@ const Product = sequelize.define('product',{
 // - S11-152:Add type imageUrl property
 // - S11-152:Add allowNull imageUrl property
 // - S11-152:Add description property object base
+// - S11-152:Add type description property
