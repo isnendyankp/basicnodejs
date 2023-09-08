@@ -35,6 +35,7 @@ app.use(errorController.get404);
 
 sequelize
     .sync()
+    .then()
 
 // s5-62: shorthand to set up the server
 app.listen(3000);
@@ -71,4 +72,4 @@ app.listen(3000);
 // - S10-142:Edit log result(array with 2 nested element)
 // - S11-153:rename cb const to sequelize
 // - S11-153:Call sequelize base
-// - S11-153:Add sync method on Call sequelize
+// - S11-153:Add then method on Call sequelize
