@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 // const expressHbs = require('express-handlebars');
 
 const errorController = require('./controllers/error');
-const db = require('./util/database');
+const sequelize = require('./util/database');
 
 const app = express();
 
@@ -66,3 +66,4 @@ app.listen(3000);
 // - S10-142:Add argument err in funct catch & log err
 // - S10-142:Add argument result in funct then & log result
 // - S10-142:Edit log result(array with 2 nested element)
+// - S11-153:rename cb const to sequelize
