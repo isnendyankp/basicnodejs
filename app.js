@@ -39,7 +39,7 @@ sequelize
         console.log(result);
     })
     .catch(err => {
-    
+        console.log(err);
     });
 
 // s5-62: shorthand to set up the server
@@ -81,3 +81,4 @@ app.listen(3000);
 // - S11-153:Add result at then sequelize
 // - S11-153:Add catch base on call sequelize
 // - S11-153:Add parameter err on catch sequelize
+// - S11-153:Add log err on catch sequelize
