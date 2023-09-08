@@ -38,6 +38,7 @@ sequelize
     .then(result => {
         console.log(result);
     })
+    .catch()
 
 // s5-62: shorthand to set up the server
 app.listen(3000);
@@ -76,3 +77,4 @@ app.listen(3000);
 // - S11-153:Call sequelize base
 // - S11-153:Add then method on Call sequelize
 // - S11-153:Add result at then sequelize
+// - S11-153:Add catch base on call sequelize
