@@ -33,6 +33,8 @@ app.use(shopRoutes);
 // adding a 404 Error page
 app.use(errorController.get404);
 
+sequelize
+
 // s5-62: shorthand to set up the server
 app.listen(3000);
 
@@ -67,3 +69,4 @@ app.listen(3000);
 // - S10-142:Add argument result in funct then & log result
 // - S10-142:Edit log result(array with 2 nested element)
 // - S11-153:rename cb const to sequelize
+// - S11-153:Call sequelize base
