@@ -16,7 +16,8 @@ exports.postAddProduct = (req, res, next) => {
   Product.create({
     title: title,
     price: price,
-    imageUrl: imageUrl
+    imageUrl: imageUrl,
+    description: description
   });
 };
 
@@ -101,3 +102,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154:Sign a title by storing title on Product create method at postAddProduct controller
 // - S11-154:Sign a price by storing price on Product create method at postAddProduct controller
 // - S11-154:Sign a imageUrl by storing imageUrl on Product create method at postAddProduct controller
+// - S11-154:Sign a description by storing description on Product create method at postAddProduct controller
