@@ -36,7 +36,7 @@ app.use(errorController.get404);
 sequelize
     .sync()
     .then(result => {
-        console.log(result);
+        // console.log(result);
         // set up the server
         app.listen(3000);
     })
@@ -84,3 +84,4 @@ sequelize
 // - S11-153:Add parameter err on catch sequelize
 // - S11-153:Add log err on catch sequelize
 // - S11-153:Move setup the server in then sequelize
+// - S11-153:unactive log result in then sequelize
