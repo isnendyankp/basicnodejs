@@ -13,13 +13,7 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
-  const product = new Product(null, title, imageUrl, description, price);
-  product
-    .save()
-    .then(() => {
-      res.redirect('/');
-    })
-    .catch(err => console.log(err));
+  Product.create();
 };
 
 exports.getEditProduct = (req, res, next) => {
@@ -99,3 +93,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - s9-132:Fix postAddproduct Controller with Add null
 // - S10-145:Add then & catch err for save postAddProduct Controller
 // - S10-145:Move res.redirect to then for save postAddProduct Controller
+// - S11-154: Add create method sequelize  base on postAddProduct
