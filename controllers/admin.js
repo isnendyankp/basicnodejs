@@ -13,7 +13,9 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
-  Product.create();
+  Product.create({
+    title: title
+  });
 };
 
 exports.getEditProduct = (req, res, next) => {
@@ -94,3 +96,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S10-145:Add then & catch err for save postAddProduct Controller
 // - S10-145:Move res.redirect to then for save postAddProduct Controller
 // - S11-154: Add create method sequelize  base on postAddProduct
+// - S11-154:Sign a title by storing title on Product create method at postAddProduct controller
