@@ -15,7 +15,8 @@ exports.postAddProduct = (req, res, next) => {
   const description = req.body.description;
   Product.create({
     title: title,
-    price: price
+    price: price,
+    imageUrl: imageUrl
   });
 };
 
@@ -99,3 +100,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154: Add create method sequelize  base on postAddProduct
 // - S11-154:Sign a title by storing title on Product create method at postAddProduct controller
 // - S11-154:Sign a price by storing price on Product create method at postAddProduct controller
+// - S11-154:Sign a imageUrl by storing imageUrl on Product create method at postAddProduct controller
