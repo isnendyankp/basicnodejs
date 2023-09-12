@@ -19,7 +19,8 @@ exports.postAddProduct = (req, res, next) => {
     imageUrl: imageUrl,
     description: description
   })
-  .then ();
+  .then()
+  .cath();
 };
 
 exports.getEditProduct = (req, res, next) => {
@@ -104,4 +105,5 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154:Sign a price by storing price on Product create method at postAddProduct controller
 // - S11-154:Sign a imageUrl by storing imageUrl on Product create method at postAddProduct controller
 // - S11-154:Sign a description by storing description on Product create method at postAddProduct controller
-// - S11-154:Add base then promise for sequelize at postAddProduct controller
+// - S11-154:Add base then promises for chain sequelize at postAddProduct controller
+// - S11-154:Add base cath promises for chain sequelize at postAddProduct controller
