@@ -20,7 +20,9 @@ exports.postAddProduct = (req, res, next) => {
     description: description
   })
   .then()
-  .cath();
+  .catch(err => {
+      console.log(err);
+    });
 };
 
 exports.getEditProduct = (req, res, next) => {
@@ -107,3 +109,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154:Sign a description by storing description on Product create method at postAddProduct controller
 // - S11-154:Add base then promises for chain sequelize at postAddProduct controller
 // - S11-154:Add base cath promises for chain sequelize at postAddProduct controller
+// - S11-154:Add catch any error include log
