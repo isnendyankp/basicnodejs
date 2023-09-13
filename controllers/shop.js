@@ -29,18 +29,18 @@ exports.getProduct = (req, res, next) => {
 exports.getIndex = (req, res, next) => {
   Product.findAll()
   .then(product =>{
-
+    res.render('shop/index', {
+        prods: rows,
+        pageTitle: 'Shop',
+        path: '/'
+      });
   })
   .catch(err => {
       console.log(err);
     });
   Product.fetchAll()
     .then(([rows, fieldData]) => {
-      res.render('shop/index', {
-        prods: rows,
-        pageTitle: 'Shop',
-        path: '/'
-      });
+      
     })
     .catch(err => console.log(err));
 };
@@ -157,3 +157,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-154:Add catch (promises) Product.findAll on getProduct
 // - S11-156:Add product list array function on then
 // - S11-156:Add error with log function on catch @getIndex
+// - S11-156:Move res.render to then find all @getIndex
