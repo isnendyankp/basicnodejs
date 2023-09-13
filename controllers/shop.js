@@ -28,7 +28,8 @@ exports.getProduct = (req, res, next) => {
 
 exports.getIndex = (req, res, next) => {
   Product.findAll()
-  .then();
+  .then()
+  .catch();
   Product.fetchAll()
     .then(([rows, fieldData]) => {
       res.render('shop/index', {
@@ -149,3 +150,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-146:Add first element [0] for bug detail inthat array
 // - S11-154:Add Product.findAll on getProduct controller
 // - S11-154:Add then (promises) Product.findAll on getProduct
+// - S11-154:Add catch (promises) Product.findAll on getProduct
