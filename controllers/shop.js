@@ -27,6 +27,7 @@ exports.getProduct = (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
+  Product.findAll()
   Product.fetchAll()
     .then(([rows, fieldData]) => {
       res.render('shop/index', {
@@ -145,3 +146,4 @@ exports.getCheckout = (req, res, next) => {
 // - S10-146:move res.render into then @getProduct
 // - S10-146:checking log for failed detail click
 // - S10-146:Add first element [0] for bug detail inthat array
+// - S11-154:Add Product.findAll on getProduct controller
