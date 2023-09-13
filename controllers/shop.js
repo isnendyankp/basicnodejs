@@ -30,7 +30,7 @@ exports.getIndex = (req, res, next) => {
   Product.findAll()
   .then(product =>{
     res.render('shop/index', {
-        prods: rows,
+        prods: product,
         pageTitle: 'Shop',
         path: '/'
       });
@@ -158,3 +158,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:Add product list array function on then
 // - S11-156:Add error with log function on catch @getIndex
 // - S11-156:Move res.render to then find all @getIndex
+// - S11-156:pass in product to prods key @getIndex
