@@ -5,7 +5,7 @@ exports.getProducts = (req, res, next) => {
   Product.findAll()
     .then(products => {
       res.render('shop/product-list', {
-        prods: rows,
+        prods: products,
         pageTitle: 'All Products',
         path: '/products'
       });
@@ -168,3 +168,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:remove fetchall @getIndex
 // - S11-156:replace fetchAll to findAll structure
 // - S11-156:replace render function @getProducts
+// - S11-156:pass in product to prods key @geProducts
