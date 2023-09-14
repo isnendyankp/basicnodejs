@@ -1,6 +1,7 @@
 const Product = require('../models/product');
 const Cart = require('../models/cart');
 
+
 exports.getProducts = (req, res, next) => {
   Product.findAll()
     .then(products => {
@@ -13,15 +14,6 @@ exports.getProducts = (req, res, next) => {
     .catch(err => {
       console.log(err);
     });
-  Product.fetchAll()
-    .then(([rows, fieldData]) => {
-      res.render('shop/product-list', {
-        prods: rows,
-        pageTitle: 'All Products',
-        path: '/products'
-      });
-    })
-    .catch(err => console.log(err));
 };
 
 exports.getProduct = (req, res, next) => {
@@ -169,3 +161,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:replace fetchAll to findAll structure
 // - S11-156:replace render function @getProducts
 // - S11-156:pass in product to prods key @geProducts
+// - S11-156:remove fetchall @getProducts
