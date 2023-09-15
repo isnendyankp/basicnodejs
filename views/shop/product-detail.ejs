@@ -6,7 +6,7 @@
         <main class="centered">
             <h1><%= product.title %></h1>
             <hr>
-            <div>
+            <div class="image">
                 <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
             </div>
             <h2><%= product.price %></h2>
@@ -25,3 +25,4 @@
 <!-- cr8 hidden input productId for request product ID -->
 <!-- cr8 include add-to-cart for form cart post for accessing productId  -->
 <!-- remove second argument because no loop in product-detail -->
+<!-- S11-157:Add image class @div view product-details -->

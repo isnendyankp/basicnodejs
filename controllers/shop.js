@@ -162,4 +162,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:replace render function @getProducts
 // - S11-156:pass in product to prods key @geProducts
 // - S11-156:remove fetchall @getProducts
-// - S11-157:remove product array parameter @getProduct
+// - S11-157:remove product array parameter @getProduct (change from array to single product)
