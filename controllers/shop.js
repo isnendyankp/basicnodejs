@@ -19,9 +19,9 @@ exports.getProducts = (req, res, next) => {
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId)
-    .then(([product]) => {
+    .then((product) => {
       res.render('shop/product-detail', {
-        product: product[0],
+        product: product,
         pageTitle: product.title,
         path: '/products'
       });
@@ -162,3 +162,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:replace render function @getProducts
 // - S11-156:pass in product to prods key @geProducts
 // - S11-156:remove fetchall @getProducts
+// - S11-157:remove product array parameter @getProduct
