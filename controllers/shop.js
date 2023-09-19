@@ -21,7 +21,7 @@ exports.getProduct = (req, res, next) => {
   Product.findAll({where: {id: prodId}})
   .then(product => {
     res.render('shop/product-detail', {
-        product: product,
+        product: product[0],
         pageTitle: product.title,
         path: '/products'
       });
@@ -175,3 +175,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-157:Add res.render for where method @getProduct
 // - S11-157:Add code for targeting first index [0]
 // - S11-157:Checking getProduct using where method (comment code product.findById @getProduct)
+// - S11-157:Fix code for targeting index [0]
