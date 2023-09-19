@@ -22,7 +22,7 @@ exports.getProduct = (req, res, next) => {
   .then(product => {
     res.render('shop/product-detail', {
         product: product[0],
-        pageTitle: product.title,
+        pageTitle: product[0].title,
         path: '/products'
       });
   })
@@ -176,3 +176,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-157:Add code for targeting first index [0]
 // - S11-157:Checking getProduct using where method (comment code product.findById @getProduct)
 // - S11-157:Fix code for targeting index [0]
+// - S11-157:Add index [0] for pageTitle @where method getProduct
