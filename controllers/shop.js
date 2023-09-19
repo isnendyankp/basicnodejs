@@ -6,7 +6,7 @@ exports.getProducts = (req, res, next) => {
   Product.findAll()
     .then(products => {
       res.render('shop/product-list', {
-        prods: products,
+        prods: products[0],
         pageTitle: 'All Products',
         path: '/products'
       });
@@ -173,3 +173,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:remove fetchall @getProducts
 // - S11-157:remove product array parameter @getProduct (change from array to single product)
 // - S11-157:Add res.render for where method @getProduct
+// - S11-157:Add code for targeting first index [0]
