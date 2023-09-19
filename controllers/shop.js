@@ -20,7 +20,11 @@ exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findAll({where: {id: prodId}})
   .then(product => {
-    
+    res.render('shop/product-detail', {
+        product: product,
+        pageTitle: product.title,
+        path: '/products'
+      });
   })
   .catch(err => console.log(err));
   Product.findById(prodId)
@@ -168,3 +172,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-156:pass in product to prods key @geProducts
 // - S11-156:remove fetchall @getProducts
 // - S11-157:remove product array parameter @getProduct (change from array to single product)
+// - S11-157:Add res.render for where method @getProduct
