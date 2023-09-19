@@ -27,15 +27,15 @@ exports.getProduct = (req, res, next) => {
       });
   })
   .catch(err => console.log(err));
-  Product.findById(prodId)
-    .then((product) => {
-      res.render('shop/product-detail', {
-        product: product,
-        pageTitle: product.title,
-        path: '/products'
-      });
-    })
-    .catch(err => console.log(err));
+  // Product.findById(prodId)
+  //   .then((product) => {
+  //     res.render('shop/product-detail', {
+  //       product: product,
+  //       pageTitle: product.title,
+  //       path: '/products'
+  //     });
+  //   })
+  //   .catch(err => console.log(err));
 };
 
 exports.getIndex = (req, res, next) => {
@@ -174,3 +174,4 @@ exports.getCheckout = (req, res, next) => {
 // - S11-157:remove product array parameter @getProduct (change from array to single product)
 // - S11-157:Add res.render for where method @getProduct
 // - S11-157:Add code for targeting first index [0]
+// - S11-157:Checking getProduct using where method (comment code product.findById @getProduct)
