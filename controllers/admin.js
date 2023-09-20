@@ -65,7 +65,7 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.findAll().then();
+  Product.findAll().then().catch();
 };
 
 exports.postDeleteProduct = (req, res, next) => {
@@ -111,3 +111,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154:Checking log Created Product on result then at postAddProduct controller
 // - S11-157:change fetchAll to findAll @getProducts
 // - S11-157:Add then promises @getProducts findAll
+// - S11-158:Add catch promises @getProducts findAll
