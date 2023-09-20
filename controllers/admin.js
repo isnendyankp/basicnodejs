@@ -65,13 +65,7 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.findAll(products => {
-    res.render('admin/products', {
-      prods: products,
-      pageTitle: 'Admin Products',
-      path: '/admin/products'
-    });
-  });
+  Product.findAll().then();
 };
 
 exports.postDeleteProduct = (req, res, next) => {
@@ -116,3 +110,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154:Add look result on then include log at postAddProduct controller
 // - S11-154:Checking log Created Product on result then at postAddProduct controller
 // - S11-157:change fetchAll to findAll @getProducts
+// - S11-157:Add then promises @getProducts findAll
