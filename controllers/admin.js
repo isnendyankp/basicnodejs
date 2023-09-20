@@ -65,7 +65,15 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.findAll().then().catch(err => console.log(err));
+  Product.findAll()
+    .then(products => {
+      res.render('admin/products', {
+        prods: products,
+        pageTitle: 'Admin Products',
+        path: '/admin/products'
+      });
+    })
+    .catch(err => console.log(err));
 };
 
 exports.postDeleteProduct = (req, res, next) => {
@@ -113,3 +121,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-157:Add then promises @getProducts findAll
 // - S11-158:Add catch promises @getProducts findAll
 // - S11-158:Add console log err @getProducts findAll catch
+// - S11-158:Add res render function @getProducts findAll then
