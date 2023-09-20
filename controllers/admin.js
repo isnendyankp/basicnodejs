@@ -65,7 +65,7 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.fetchAll(products => {
+  Product.findAll(products => {
     res.render('admin/products', {
       prods: products,
       pageTitle: 'Admin Products',
@@ -115,3 +115,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-154:Add catch any error include log at postAddProduct controller
 // - S11-154:Add look result on then include log at postAddProduct controller
 // - S11-154:Checking log Created Product on result then at postAddProduct controller
+// - S11-157:change fetchAll to findAll @getProducts
