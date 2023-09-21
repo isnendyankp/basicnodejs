@@ -34,17 +34,7 @@ exports.getEditProduct = (req, res, next) => {
     return res.redirect('/');
   }
   const prodId = req.params.productId;
-  Product.findById(prodId, product => {
-    if (!product) {
-      return res.redirect('/');
-    }
-    res.render('admin/edit-product', {
-      pageTitle: 'Edit Product',
-      path: '/admin/edit-product',
-      editing: editMode,
-      product: product
-    });
-  });
+  Product.findById(prodId);
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -122,3 +112,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-158:Add catch promises @getProducts findAll
 // - S11-158:Add console log err @getProducts findAll catch
 // - S11-158:Add res render function @getProducts findAll then
+// - S11-159: remove CB function @getEditProduct
