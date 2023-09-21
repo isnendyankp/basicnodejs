@@ -35,8 +35,12 @@ exports.getEditProduct = (req, res, next) => {
   }
   const prodId = req.params.productId;
   Product.findById(prodId)
-  .then()
-  .catch(err => console.log(err));
+    .then(product => {
+      if (!product) {
+        return res.redirect('/');
+      }
+    })
+    .catch(err => console.log(err));
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -118,3 +122,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add then promises @getEditProduct>findById
 // - S11-159:Add catch promises @getEditProduct>findById
 // - S11-159:Add check err log @getEditProduct>findById>catch
+// - S11-159:Add if param for get product @getEditProduct
