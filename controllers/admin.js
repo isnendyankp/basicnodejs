@@ -55,14 +55,7 @@ exports.postEditProduct = (req, res, next) => {
   const updatedPrice = req.body.price;
   const updatedImageUrl = req.body.imageUrl;
   const updatedDesc = req.body.description;
-  const updatedProduct = new Product(
-    prodId,
-    updatedTitle,
-    updatedImageUrl,
-    updatedDesc,
-    updatedPrice
-  );
-  updatedProduct.save();
+  Product.findById()
   res.redirect('/admin/products');
 };
 
@@ -130,3 +123,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add check err log @getEditProduct>findById>catch
 // - S11-159:Add if param for get product @getEditProduct
 // - S11-159:Add res render function @getEditProduct
+// - S11-159:Add function to find element 1st database @PostEditProduct
