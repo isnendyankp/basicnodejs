@@ -39,6 +39,12 @@ exports.getEditProduct = (req, res, next) => {
       if (!product) {
         return res.redirect('/');
       }
+      res.render('admin/edit-product', {
+        pageTitle: 'Edit Product',
+        path: '/admin/edit-product',
+        editing: editMode,
+        product: product
+      });
     })
     .catch(err => console.log(err));
 };
@@ -123,3 +129,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add catch promises @getEditProduct>findById
 // - S11-159:Add check err log @getEditProduct>findById>catch
 // - S11-159:Add if param for get product @getEditProduct
+// - S11-159:Add res render function @getEditProduct
