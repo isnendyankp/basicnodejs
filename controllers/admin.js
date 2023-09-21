@@ -34,7 +34,9 @@ exports.getEditProduct = (req, res, next) => {
     return res.redirect('/');
   }
   const prodId = req.params.productId;
-  Product.findById(prodId).then().catch();
+  Product.findById(prodId)
+  .then()
+  .catch(err => console.log(err));
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -114,4 +116,5 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-158:Add res render function @getProducts findAll then
 // - S11-159: remove CB function @getEditProduct
 // - S11-159:Add then promises @getEditProduct>findById
-// -S11-159:Add catch promises @getEditProduct>findById
+// - S11-159:Add catch promises @getEditProduct>findById
+// - S11-159:Add check err log @getEditProduct>findById>catch
