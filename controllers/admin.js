@@ -57,7 +57,7 @@ exports.postEditProduct = (req, res, next) => {
   const updatedDesc = req.body.description;
   Product.findById()
   .then()
-  .catch();
+  .catch(err => console.log(err));
   res.redirect('/admin/products');
 };
 
@@ -128,3 +128,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add function to find element 1st database @PostEditProduct
 // - S11-159:Add then promises @PostEditProduct>findById
 // - S11-159:Add catch promises @PostEditProduct>findById
+// - S11-159:Add check err @postEditProduct>findById>catch
