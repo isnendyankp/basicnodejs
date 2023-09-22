@@ -56,7 +56,9 @@ exports.postEditProduct = (req, res, next) => {
   const updatedImageUrl = req.body.imageUrl;
   const updatedDesc = req.body.description;
   Product.findById()
-  .then()
+  .then(product => {
+
+  })
   .catch(err => console.log(err));
   res.redirect('/admin/products');
 };
@@ -129,3 +131,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add then promises @PostEditProduct>findById
 // - S11-159:Add catch promises @PostEditProduct>findById
 // - S11-159:Add check err @postEditProduct>findById>catch
+// - S11-159:Add product param @postEditProduct>findById>then
