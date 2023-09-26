@@ -64,7 +64,7 @@ exports.postEditProduct = (req, res, next) => {
     return product.save();
   })
   .then(result =>{
-
+    console.log('UPDATED PRODUCT!');
   })
   .catch(err => console.log(err));
   res.redirect('/admin/products');
@@ -147,3 +147,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add return the promise 
 // - S11-159:Add then promise to handle success response from save promise before
 // - S11-159: Add result function base @then promise to handle success response from save promise before
+// - S11-159: Add log for update product
