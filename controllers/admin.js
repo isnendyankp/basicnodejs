@@ -61,7 +61,7 @@ exports.postEditProduct = (req, res, next) => {
     product.price = updatedPrice;
     product.description = updatedDesc;
     product.imageUrl = updatedImageUrl;
-    product.save();
+    return product.save();
   })
   .catch(err => console.log(err));
   res.redirect('/admin/products');
@@ -141,3 +141,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add product.description to update description @postEditProduct>findById>then
 // - S11-159:Add product.imageUrl for update imageUrl @postEditProduct>findById>then
 // - S11-159:Add call product.save
+// - S11-159:Add return the promise 
