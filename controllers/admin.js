@@ -59,6 +59,8 @@ exports.postEditProduct = (req, res, next) => {
   .then(product => {
     product.title = updatedTitle;
     product.price = updatedPrice;
+    product.description = updatedDesc;
+    product.imageUrl = updatedImageUrl;
   })
   .catch(err => console.log(err));
   res.redirect('/admin/products');
@@ -136,3 +138,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add product.title @postEditProduct>findById>then
 // - S11-159:Add product.price to update price @postEditProduct>findById>then
 // - S11-159:Add product.description to update description @postEditProduct>findById>then
+// - S11-159:Add product.imageUrl for update imageUrl @postEditProduct>findById>then
