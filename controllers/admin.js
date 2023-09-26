@@ -135,3 +135,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add product param @postEditProduct>findById>then
 // - S11-159:Add product.title @postEditProduct>findById>then
 // - S11-159:Add product.price to update price @postEditProduct>findById>then
+// - S11-159:Add product.description to update description @postEditProduct>findById>then
