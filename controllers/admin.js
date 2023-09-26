@@ -58,6 +58,7 @@ exports.postEditProduct = (req, res, next) => {
   Product.findById()
   .then(product => {
     product.title = updatedTitle;
+    product.price = updatedPrice;
   })
   .catch(err => console.log(err));
   res.redirect('/admin/products');
@@ -133,3 +134,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159:Add check err @postEditProduct>findById>catch
 // - S11-159:Add product param @postEditProduct>findById>then
 // - S11-159:Add product.title @postEditProduct>findById>then
+// - S11-159:Add product.price to update price @postEditProduct>findById>then
