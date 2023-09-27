@@ -86,7 +86,7 @@ exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   Product.findById(prodId)
     .then(product =>{
-      product.destroy();
+     return product.destroy();
     })
     .catch(err => console.log(err));
   res.redirect('/admin/products');
