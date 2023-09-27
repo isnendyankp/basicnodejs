@@ -84,7 +84,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.findById();
+  Product.findById(prodId);
   res.redirect('/admin/products');
 };
 
@@ -150,3 +150,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159: Add log for update product
 // - S11-159: Move ress redirect
 // - S11-160:change deleteById to findById @postDelete Product
+// - S11-160:Pass in prodId @postDeleteProduct>findById
