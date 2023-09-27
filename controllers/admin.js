@@ -86,7 +86,7 @@ exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   Product.findById(prodId)
     .then(product =>{
-
+      product.destroy();
     })
     .catch(err => console.log(err));
   res.redirect('/admin/products');
@@ -159,3 +159,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-160:Add catch Prom @postDeleteProduct>findById
 // - S11-160:Add err log @postDeleteProduct>findById>cacth
 // - S11-160:pass in product@postDeleteProduct>findById>then
+// - S11-160:Add call product.destroy @then 
