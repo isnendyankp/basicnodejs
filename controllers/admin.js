@@ -84,7 +84,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.deleteById(prodId);
+  Product.findById();
   res.redirect('/admin/products');
 };
 
@@ -149,3 +149,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-159: Add result function base @then promise to handle success response from save promise before
 // - S11-159: Add log for update product
 // - S11-159: Move ress redirect
+// - S11-160:change deleteById to findById @postDelete Product
