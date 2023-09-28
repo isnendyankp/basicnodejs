@@ -22,6 +22,7 @@ exports.postAddProduct = (req, res, next) => {
     .then(result => {
       // console.log(result);
       console.log('Created Product');
+      res.redirect('/admin/products');
     })
     .catch(err => {
       console.log(err);
@@ -168,3 +169,4 @@ exports.postDeleteProduct = (req, res, next) => {
 // - S11-160:Add result function base @postDeleteProduct>findById>then 2 for execute once destrotion is done
 // - S11-160:Add log destroy product @postDeleteProduct>findById>then 2 for execute once destrotion is done
 // - S11-160:Add res redirect @postDeleteProduct>findById>then 2 for execute once destrotion is done
+// - S11-160:Add res redirect @postAddProduct>then for create product
