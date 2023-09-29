@@ -6,6 +6,7 @@ const User = sequelize.define('user', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
+        allowNull: false,
     }
 });
 
@@ -18,3 +19,4 @@ const User = sequelize.define('user', {
 // S11-161: Add id field @user model
 // S11-161: Add type field @user model>id
 // S11-161: Add autoIncrement field @user model>id
+// S11-161: Add allowNull field @user model>id
