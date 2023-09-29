@@ -5,6 +5,7 @@ const sequelize = require('../util/database');
 const User = sequelize.define('user', {
     id: {
         type: Sequelize.INTEGER,
+        autoIncrement: true,
     }
 });
 
@@ -16,3 +17,4 @@ const User = sequelize.define('user', {
 // S11-161: Add structure of the user model
 // S11-161: Add id field @user model
 // S11-161: Add type field @user model>id
+// S11-161: Add autoIncrement field @user model>id
