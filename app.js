@@ -35,7 +35,7 @@ app.use(shopRoutes);
 // adding a 404 Error page
 app.use(errorController.get404);
 
-Product.belongsTo(User);
+Product.belongsTo(User, { constraints: true, });
 
 sequelize
     .sync()
@@ -93,3 +93,4 @@ sequelize
 // - S11-162:Import User model
 // - S11-162:Call sequelize base with belongTo method
 // - S11-162:Add User model on belongTo method
+// - S11-162:Add constraint true on belongTo method
