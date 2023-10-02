@@ -8,7 +8,8 @@ const User = sequelize.define('user', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
-    }
+    },
+    name: sequelize.STRING,
 });
 
 
@@ -22,3 +23,4 @@ const User = sequelize.define('user', {
 // S11-161: Add autoIncrement field @user model>id
 // S11-161: Add allowNull field @user model>id
 // S11-161: Add primaryKey field @user model>id
+// S11-161: Add name field @user model
