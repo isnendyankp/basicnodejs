@@ -13,6 +13,8 @@ const User = sequelize.define('user', {
     email: sequelize.STRING
 });
 
+module.exports = User;
+
 
 // progress:
 // S11-161: define Sequelize
@@ -26,3 +28,4 @@ const User = sequelize.define('user', {
 // S11-161: Add primaryKey field @user model>id
 // S11-161: Add name field @user model
 // S11-161: Add email field @user model
+// S11-161: Export User model
