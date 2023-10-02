@@ -35,6 +35,8 @@ app.use(shopRoutes);
 // adding a 404 Error page
 app.use(errorController.get404);
 
+Product.belongsTo();
+
 sequelize
     .sync()
     .then(result => {
@@ -89,3 +91,4 @@ sequelize
 // - S11-153:unactive log result in then sequelize
 // - S11-162:Import Product model
 // - S11-162:Import User model
+// - S11-162:Call sequelize base with belongTo method
