@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const errorController = require('./controllers/error');
 const sequelize = require('./util/database');
 const Product = require('./models/product');
+const User = require('./models/user');
 
 const app = express();
 
@@ -87,3 +88,4 @@ sequelize
 // - S11-153:Move setup the server in then sequelize
 // - S11-153:unactive log result in then sequelize
 // - S11-162:Import Product model
+// - S11-162:Import User model
