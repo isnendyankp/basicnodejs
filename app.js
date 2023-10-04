@@ -36,7 +36,7 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
 Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
-User.hasMany();
+User.hasMany(Product);
 
 sequelize
     .sync()
@@ -97,3 +97,4 @@ sequelize
 // - S11-162:Add constraint true on belongTo method
 // - S11-162:Add onDelete method on belongTo method
 // - S11-162:Add define user hasMany
+// - S11-162:Add product @user>hasMany method
