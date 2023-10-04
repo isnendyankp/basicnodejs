@@ -39,7 +39,7 @@ Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Product);
 
 sequelize
-    .sync()
+    .sync({ force: true})
     .then(result => {
         // console.log(result);
         // set up the server
@@ -98,3 +98,4 @@ sequelize
 // - S11-162:Add onDelete method on belongTo method
 // - S11-162:Add define user hasMany
 // - S11-162:Add product @user>hasMany method
+// - S11-162:Add force true @sequelize>sync
