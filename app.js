@@ -35,7 +35,7 @@ app.use(shopRoutes);
 // adding a 404 Error page
 app.use(errorController.get404);
 
-Product.belongsTo(User, { constraints: true, });
+Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 
 sequelize
     .sync()
@@ -94,3 +94,4 @@ sequelize
 // - S11-162:Call sequelize base with belongTo method
 // - S11-162:Add User model on belongTo method
 // - S11-162:Add constraint true on belongTo method
+// - S11-162:Add onDelete method on belongTo method
