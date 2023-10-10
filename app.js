@@ -43,6 +43,9 @@ sequelize
         // console.log(result);
         // set up the server
     })
+    .then(user => {
+
+    });
     .catch(err => {
         console.log(err);
     });
@@ -97,3 +100,4 @@ sequelize
 // - S11-163:unactive .sync force true @sequelize>sync
 // - S11-163:Add findById method on User @sequelize>sync>then>result
 // - S11-163:Change to return for User.findById(1) @sequelize>sync>then>result
+// - S11-163:Add then method for retrive user @sequelize
