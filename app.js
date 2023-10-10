@@ -39,6 +39,7 @@ sequelize
     // .sync({ force: true})
     .sync()
     .then(result => {
+        User.findById(1);
         // console.log(result);
         // set up the server
         app.listen(3000);
@@ -95,3 +96,4 @@ sequelize
 // - S11-162:Add product @user>hasMany method
 // - S11-162:Add force true @sequelize>sync
 // - S11-163:unactive .sync force true @sequelize>sync
+// - S11-163:Add findById method on User @sequelize>sync>then>result
