@@ -45,7 +45,7 @@ sequelize
     })
     .then(user => {
         if (!user) {
-
+            user.create();
         }
     });
     .catch(err => {
@@ -104,3 +104,4 @@ sequelize
 // - S11-163:Change to return for User.findById(1) @sequelize>sync>then>result
 // - S11-163:Add then method for retrive user @sequelize
 // - S11-163:Add if condition for check if dont have a user @sequelize
+// - S11-163:Add user.create @sequelize>then
