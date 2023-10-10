@@ -39,10 +39,9 @@ sequelize
     // .sync({ force: true})
     .sync()
     .then(result => {
-        User.findById(1);
+        return User.findById(1);
         // console.log(result);
         // set up the server
-        app.listen(3000);
     })
     .catch(err => {
         console.log(err);
@@ -97,3 +96,4 @@ sequelize
 // - S11-162:Add force true @sequelize>sync
 // - S11-163:unactive .sync force true @sequelize>sync
 // - S11-163:Add findById method on User @sequelize>sync>then>result
+// - S11-163:Change to return for User.findById(1) @sequelize>sync>then>result
