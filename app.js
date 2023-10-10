@@ -44,7 +44,9 @@ sequelize
         // set up the server
     })
     .then(user => {
+        if (!user) {
 
+        }
     });
     .catch(err => {
         console.log(err);
@@ -101,3 +103,4 @@ sequelize
 // - S11-163:Add findById method on User @sequelize>sync>then>result
 // - S11-163:Change to return for User.findById(1) @sequelize>sync>then>result
 // - S11-163:Add then method for retrive user @sequelize
+// - S11-163:Add if condition for check if dont have a user @sequelize
