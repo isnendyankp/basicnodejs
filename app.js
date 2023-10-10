@@ -45,7 +45,7 @@ sequelize
     })
     .then(user => {
         if (!user) {
-            user.create({ name: 'Max', email: 'test@test.com'});
+         return user.create({ name: 'Max', email: 'test@test.com'});
         }
     });
     .catch(err => {
@@ -106,3 +106,4 @@ sequelize
 // - S11-163:Add if condition for check if dont have a user @sequelize
 // - S11-163:Add user.create @sequelize>then
 // - S11-163:Add prop name & email for user.create @sequelize>then
+// - S11-163:Add return if condition for user.create @sequelize>then
