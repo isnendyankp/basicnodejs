@@ -47,6 +47,7 @@ sequelize
         if (!user) {
          return user.create({ name: 'Max', email: 'test@test.com'});
         }
+        return user;
     });
     .catch(err => {
         console.log(err);
@@ -107,3 +108,4 @@ sequelize
 // - S11-163:Add user.create @sequelize>then
 // - S11-163:Add prop name & email for user.create @sequelize>then
 // - S11-163:Add return if condition for user.create @sequelize>then
+// - S11-163:Add return for then user @sequelize>then
