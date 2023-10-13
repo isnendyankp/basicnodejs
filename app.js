@@ -51,7 +51,7 @@ sequelize
     });
     then(user => {
         console.log(user);
-       
+        app.listen(3000);
     });
     .catch(err => {
         console.log(err);
@@ -116,3 +116,4 @@ sequelize
 // - S11-163:Add then method for using app.listen @sequelize
 // - S11-163:Add user then method for app.listen @sequelize
 // - S11-163:Add log user @sequelize>then(app.listen)
+// - S11-163:passin app.listen into then method @sequelize(app.listen)
