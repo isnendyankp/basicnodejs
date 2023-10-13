@@ -49,7 +49,9 @@ sequelize
         }
         return user;
     });
-    then();
+    then(user => {
+
+    });
     .catch(err => {
         console.log(err);
     });
@@ -111,3 +113,4 @@ sequelize
 // - S11-163:Add return if condition for user.create @sequelize>then
 // - S11-163:Add return for then user @sequelize>then
 // - S11-163:Add then method for using app.listen @sequelize
+// - S11-163:Add user then method for app.listen @sequelize
