@@ -33,6 +33,7 @@ app.use((req, res, next) => {
             req.user = user;
             next();
         });
+        .catch(err => console.log(err));
 });
 
 // call Routes
