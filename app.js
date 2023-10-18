@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // cr8 middleware for user
 app.use((req, res, next) => {
-
+    User.findById(1);
 });
 
 // call Routes
@@ -124,3 +124,4 @@ sequelize
 // - S11-163:Add log user @sequelize>then(app.listen)
 // - S11-163:passin app.listen into then method @sequelize(app.listen)
 // - S11-163:Add new middleware for user @app>use
+// - S11-163:Add findById method on User @app>use
