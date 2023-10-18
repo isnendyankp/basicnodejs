@@ -28,12 +28,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // cr8 middleware for user
 app.use((req, res, next) => {
-    User.findById(1)
-        .then(user => {
-            req.user = user;
-            next();
-        });
-        .catch(err => console.log(err));
+  User.findById(1)
+    .then(user => {
+      req.user = user;
+      next();
+    })
+    .catch(err => console.log(err));
 });
 
 // call Routes
