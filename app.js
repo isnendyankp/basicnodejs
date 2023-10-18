@@ -28,7 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // cr8 middleware for user
 app.use((req, res, next) => {
-    User.findById(1);
+    User.findById(1)
+        .then(user => {
+            
+        });
 });
 
 // call Routes
