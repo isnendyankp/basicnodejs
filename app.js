@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
     User.findById(1)
         .then(user => {
-            
+            req.user = user;
         });
 });
 
