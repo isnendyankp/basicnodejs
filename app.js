@@ -25,6 +25,12 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extended: false }));
 // Serving File Staticly for split styling css
 app.use(express.static(path.join(__dirname, 'public')));
+
+// cr8 middleware for user
+app.use((req, res, next) => {
+
+});
+
 // call Routes
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
@@ -117,3 +123,4 @@ sequelize
 // - S11-163:Add user then method for app.listen @sequelize
 // - S11-163:Add log user @sequelize>then(app.listen)
 // - S11-163:passin app.listen into then method @sequelize(app.listen)
+// - S11-163:Add new middleware for user @app>use
