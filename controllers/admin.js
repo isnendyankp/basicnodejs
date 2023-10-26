@@ -38,8 +38,9 @@ exports.getEditProduct = (req, res, next) => {
   }
   const prodId = req.params.productId;
   // getProducts is a sequelize method, defined where id equals prodId
-  req.user.getProducts({where: {id: prodId}}) 
-  Product.findById(prodId)
+  req.user
+    .getProducts({where: {id: prodId}}) 
+  // Product.findById(prodId)
     .then(product => {
       if (!product) {
         return res.redirect('/');
