@@ -48,6 +48,7 @@ app.use(errorController.get404);
 
 Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Product);
+User.hasOne(Cart);
 
 sequelize
   // .sync({ force: true })
@@ -75,3 +76,4 @@ sequelize
 // Progress:
 // s11-166:import Cart model
 // s11-166:import CartItem model
+// s11-166:Define relationship between User and Product
