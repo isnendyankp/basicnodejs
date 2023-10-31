@@ -50,6 +50,7 @@ Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Product);
 User.hasOne(Cart);
 Cart.belongsTo(User);
+Cart.belongsToMany(Product, { through: CartItem });
 
 sequelize
   // .sync({ force: true })
@@ -79,3 +80,5 @@ sequelize
 // s11-166:import CartItem model
 // s11-166:Define relationship between User and Product
 // s11-166:Define relationship between User and Cart
+// s11-166:Define relationship between Cart and Product through CartItem
+
