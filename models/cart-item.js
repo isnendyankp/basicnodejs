@@ -11,8 +11,11 @@ const CartItem = sequelize.define('cartItem', {
     }
 });
 
+module.exports = CartItem;
+
 
 // Progress:
 // s11-166:Import sequelize from database file
 // s11-166:Define CartItem model with sequelize.define() & name it cartItem
 // s11-166:Add id property to cartItem model
+// s11-166:Export cartItem model
