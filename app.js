@@ -51,6 +51,7 @@ User.hasMany(Product);
 User.hasOne(Cart);
 Cart.belongsTo(User);
 Cart.belongsToMany(Product, { through: CartItem });
+Product.belongsToMany(Cart, { through: CartItem });
 
 sequelize
   // .sync({ force: true })
@@ -81,4 +82,5 @@ sequelize
 // s11-166:Define relationship between User and Product
 // s11-166:Define relationship between User and Cart
 // s11-166:Define relationship between Cart and Product through CartItem
+// s11-166:Define relationship between Product and Cart through CartItem
 
