@@ -8,6 +8,8 @@ const errorController = require('./controllers/error');
 const sequelize = require('./util/database');
 const Product = require('./models/product');
 const User = require('./models/user');
+const Cart = require('./models/cart');
+
 
 const app = express();
 
@@ -68,3 +70,6 @@ sequelize
     console.log(err);
   });
 
+
+// Progress:
+// s11-166:import Cart model
