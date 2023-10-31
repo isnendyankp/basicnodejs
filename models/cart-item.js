@@ -8,7 +8,8 @@ const CartItem = sequelize.define('cartItem', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
-    }
+    },
+    quantity: Seqeulize.INTEGER
 });
 
 module.exports = CartItem;
@@ -19,3 +20,4 @@ module.exports = CartItem;
 // s11-166:Define CartItem model with sequelize.define() & name it cartItem
 // s11-166:Add id property to cartItem model
 // s11-166:Export cartItem model
+// s11-166:Add quantity property to cartItem model
