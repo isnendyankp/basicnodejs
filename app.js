@@ -69,6 +69,9 @@ sequelize
   })
   .then(user => {
     // console.log(user);
+    return user.createCart();
+  })
+  .then(cart => {
     app.listen(3000);
   })
   .catch(err => {
@@ -83,4 +86,5 @@ sequelize
 // s11-166:Define relationship between User and Cart
 // s11-166:Define relationship between Cart and Product through CartItem
 // s11-166:Define relationship between Product and Cart through CartItem
+// s11-167: add req.user.getCart() to getCart controller
 
