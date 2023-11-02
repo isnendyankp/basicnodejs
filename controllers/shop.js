@@ -53,7 +53,7 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getCart = (req, res, next) => {
-  req.user,getCart();
+  req.user,getCart().then().catch(err => console.log(err));
   // Cart.getCart(cart => {
   //   Product.fetchAll(products => {
   //     const cartProducts = [];
@@ -106,3 +106,4 @@ exports.getCheckout = (req, res, next) => {
 
 
 // s11-167: req.user.getCart() is a sequelize method
+// s11-167: Add then() and catch() to getCart() method
