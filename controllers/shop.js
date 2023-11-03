@@ -61,6 +61,7 @@ exports.getCart = (req, res, next) => {
           res.render('shop/cart', {
             path: '/cart',
             pageTitle: 'Your Cart'
+            products: products
           });
         })
         .catch(err => console.log(err));
@@ -127,4 +128,5 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add res.render() to then() method @getCart() method
 // s11-167: Add path to res.render() @getCart() method
 // s11-167: Add pageTitle to res.render() @getCart() method
+// s11-167: Add products to res.render() @getCart() method
 
