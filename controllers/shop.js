@@ -56,7 +56,9 @@ exports.getCart = (req, res, next) => {
   req.user
       .getCart()
       .then(cart => {
-        return cart.getProducts().then();
+        return cart.getProducts()
+        .then()
+        .catch(err => console.log(err));
       })
       .catch(err => console.log(err));
   // Cart.getCart(cart => {
@@ -114,4 +116,5 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add then() and catch() to getCart() method
 // s11-167: pass in cart @ then() method for getCart() method
 // s11-167: Add return cart.getProducts() to getCart() method
-// s11-167: Add then()  @getCart() method
+// s11-167: Add then() return  @getCart() method
+// s11-167: Add catch() return  @getCart() method
