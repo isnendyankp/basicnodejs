@@ -72,10 +72,8 @@ exports.getCart = (req, res, next) => {
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.findById(prodId, product => {
-    Cart.addProduct(prodId, product.price);
-  });
-  res.redirect('/cart');
+  req.user
+    .getCart()
 };
 
 exports.postCartDeleteProduct = (req, res, next) => {
@@ -112,4 +110,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add path to res.render() @getCart() method
 // s11-167: Add pageTitle to res.render() @getCart() method
 // s11-167: Add products to res.render() @getCart() method
-
+// s11-167: Add req.user.getCart() @exports.postCart
