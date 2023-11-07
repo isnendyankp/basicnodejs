@@ -74,6 +74,8 @@ exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
   req.user
     .getCart()
+    .then()
+    .catch(err => console.log(err));
 };
 
 exports.postCartDeleteProduct = (req, res, next) => {
@@ -111,3 +113,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add pageTitle to res.render() @getCart() method
 // s11-167: Add products to res.render() @getCart() method
 // s11-167: Add req.user.getCart() @exports.postCart
+// s11-167: Add then() and catch() to req.user.getCart() @exports.postCart
