@@ -77,6 +77,9 @@ exports.postCart = (req, res, next) => {
     .then(cart => { 
       return cart.getProducts({ where: { id: prodId } });
     })
+    .then(products => {
+
+    })
     .catch(err => console.log(err));
 };
 
@@ -118,3 +121,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add then() and catch() to req.user.getCart() @exports.postCart
 // s11-167: pass in cart to then method @exports.postCart
 // s11-167: Add return with where clause to then method @exports.postCart
+// s11-167: Add then wih passin products@exports.postCart
