@@ -72,6 +72,7 @@ exports.getCart = (req, res, next) => {
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
+  let fetchedCart;
   req.user
     .getCart()
     .then(cart => { 
@@ -142,3 +143,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-168: add return to call product @exports.postCart
 // s11-168: pass in productid to findById method @exports.postCart
 // s11-168: add then() and catch() to return findById method @exports.postCart
+// s11-168: add define fetchedCart var @exports.postCart
