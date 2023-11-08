@@ -78,7 +78,7 @@ exports.postCart = (req, res, next) => {
       return cart.getProducts({ where: { id: prodId } });
     })
     .then(products => {
-      const product = products[0];
+      let product;
     })
     .catch(err => console.log(err));
 };
@@ -123,3 +123,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add return with where clause to then method @exports.postCart
 // s11-167: Add then wih passin products@exports.postCart
 // s11-167: add retrive single product from products @exports.postCart
+// s11-167: add product to then method @exports.postCart
