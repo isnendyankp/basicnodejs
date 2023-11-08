@@ -87,6 +87,10 @@ exports.postCart = (req, res, next) => {
         // ...
       }
       return Product.findById(prodId)
+        .then(product => {
+          
+        })
+        .catch(err => console.log(err));
     })
     .catch(err => console.log(err));
 };
@@ -137,3 +141,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-168: add if product is anything but undefined @exports.postCart
 // s11-168: add return to call product @exports.postCart
 // s11-168: pass in productid to findById method @exports.postCart
+// s11-168: add then() and catch() to return findById method @exports.postCart
