@@ -83,6 +83,9 @@ exports.postCart = (req, res, next) => {
         product = products[0];
       }
       let newQuantity = 1;
+      if (product) {
+
+      }
     })
     .catch(err => console.log(err));
 };
@@ -130,3 +133,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: add product to then method @exports.postCart
 // s11-167: add if statement to then method @exports.postCart
 // s11-167: add newQuantity var with default value of 1 @exports.postCart
+// s11-167: add if product is anything but undefined @exports.postCart
