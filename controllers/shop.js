@@ -79,6 +79,9 @@ exports.postCart = (req, res, next) => {
     })
     .then(products => {
       let product;
+      if (products.length > 0) {
+        product = products[0];
+      }
     })
     .catch(err => console.log(err));
 };
@@ -124,3 +127,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-167: Add then wih passin products@exports.postCart
 // s11-167: add retrive single product from products @exports.postCart
 // s11-167: add product to then method @exports.postCart
+// s11-167: add if statement to then method @exports.postCart
