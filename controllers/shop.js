@@ -86,7 +86,7 @@ exports.postCart = (req, res, next) => {
       if (product) {
         // ...
       }
-      return Product.findById()
+      return Product.findById(prodId)
     })
     .catch(err => console.log(err));
 };
@@ -136,3 +136,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-168: add newQuantity var with default value of 1 @exports.postCart
 // s11-168: add if product is anything but undefined @exports.postCart
 // s11-168: add return to call product @exports.postCart
+// s11-168: pass in productid to findById method @exports.postCart
