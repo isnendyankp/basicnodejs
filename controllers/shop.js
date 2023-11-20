@@ -97,6 +97,9 @@ exports.postCart = (req, res, next) => {
         })
         .catch(err => console.log(err));
     })
+    .then(() => {
+      res.redirect('/cart');
+    })
     .catch(err => console.log(err));
 };
 
@@ -152,3 +155,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-168: add return @exports.postCart>req.user>return>then
 // s11-168: fix code with addProduct method @exports.postCart>req.user>return>then
 // s11-168: add through object with quantity property @exports.postCart>req.user>return>then
+// s11-168: add then with res redirect cart @exports.postCart>req.user>then
