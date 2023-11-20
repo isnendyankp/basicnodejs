@@ -90,7 +90,7 @@ exports.postCart = (req, res, next) => {
       }
       return Product.findById(prodId)
         .then(product => {
-          
+          return fetchedCart.;
         })
         .catch(err => console.log(err));
     })
@@ -146,3 +146,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-168: add then() and catch() to return findById method @exports.postCart
 // s11-168: add define fetchedCart var @exports.postCart
 // s11-168: pass in fetchedCart to store the cart in fetchedCart @exports.postCart
+// s11-168: add return @exports.postCart>req.user>return>then
