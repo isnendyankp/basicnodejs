@@ -12,7 +12,7 @@
                             <h2>Quantity: <%= p.cartItem.quantity %></h2>
                             <form action="/cart-delete-item" method="POST">
                                 <input type="hidden" value="<%= p.id %>" name="productId">
-                                <button class="btn" type="submit">Delete</button>
+                                <button class="btn danger" type="submit">Delete</button>
                             </form>
                         </li>
                     <% }) %>
@@ -36,3 +36,4 @@
 <!-- s9-131: Add h2 for quantity -->
 <!-- s9-131: change value to p.id @input -->
 <!-- s9-131: Add class cart__item-list @ul -->
+<!-- s9-131: change class to btn danger @button -->
