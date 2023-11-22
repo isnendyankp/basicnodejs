@@ -107,6 +107,8 @@ exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   req.user
     .getCart()
+    .then()
+    .catch(err => console.log(err));
   Product.findById(prodId, product => {
     Cart.deleteProduct(prodId, product.price);
     res.redirect('/cart');
@@ -159,3 +161,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-168: add through object with quantity property @exports.postCart>req.user>return>then
 // s11-168: add then with res redirect cart @exports.postCart>req.user>then
 // s11-170: add req.user.getCart() @exports.postCartDeleteProduct
+// s11-170: add then and catch to req.user @exports.postCartDeleteProduct
