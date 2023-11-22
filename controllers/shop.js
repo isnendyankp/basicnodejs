@@ -110,6 +110,8 @@ exports.postCartDeleteProduct = (req, res, next) => {
     .then(cart => {
       return cart.getProducts({ where: { id: prodId } });
     })
+    .then(products => {
+    })
     .catch(err => console.log(err));
   Product.findById(prodId, product => {
     Cart.deleteProduct(prodId, product.price);
@@ -167,3 +169,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-170: pass in cart to then method @exports.postCartDeleteProduct
 // s11-170: add return cart.getProducts to then method @exports.postCartDeleteProduct
 // s11-170: pass in where clause for matching id with prodId @exports.postCartDeleteProduct
+// s11-170: add then with passin products @exports.postCartDeleteProduct
