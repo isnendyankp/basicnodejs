@@ -112,7 +112,7 @@ exports.postCartDeleteProduct = (req, res, next) => {
     })
     .then(products => {
       const product = products[0];
-      product.cartItem.destroy();
+      return product.cartItem.destroy();
     })
     .catch(err => console.log(err));
   Product.findById(prodId, product => {
