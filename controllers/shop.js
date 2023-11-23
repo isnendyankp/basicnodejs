@@ -112,6 +112,7 @@ exports.postCartDeleteProduct = (req, res, next) => {
     })
     .then(products => {
       const product = products[0];
+      product.cartItem.destroy();
     })
     .catch(err => console.log(err));
   Product.findById(prodId, product => {
@@ -172,3 +173,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-170: pass in where clause for matching id with prodId @exports.postCartDeleteProduct
 // s11-170: add then with passin products @exports.postCartDeleteProduct
 // s11-170: add product for extracting first index products array @exports.postCartDeleteProduct
+// s11-170: add destroy for product only cartItem @exports.postCartDeleteProduct
