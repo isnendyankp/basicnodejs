@@ -114,6 +114,9 @@ exports.postCartDeleteProduct = (req, res, next) => {
       const product = products[0];
       return product.cartItem.destroy();
     })
+    .then(result => {
+
+    })
     .catch(err => console.log(err));
   Product.findById(prodId, product => {
     Cart.deleteProduct(prodId, product.price);
@@ -174,3 +177,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-170: add then with passin products @exports.postCartDeleteProduct
 // s11-170: add product for extracting first index products array @exports.postCartDeleteProduct
 // s11-170: add destroy for product only cartItem @exports.postCartDeleteProduct
+// s11-170: add then with passin result @exports.postCartDeleteProduct
