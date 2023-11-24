@@ -134,7 +134,6 @@ exports.getCheckout = (req, res, next) => {
   });
 };
 
-
 // s11-167: req.user.getCart() is a sequelize method
 // s11-167: Add then() and catch() to getCart() method
 // s11-167: pass in cart @ then() method for getCart() method
