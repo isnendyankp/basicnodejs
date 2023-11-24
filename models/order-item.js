@@ -9,7 +9,7 @@ const OrderItem = sequelize.define('orderItem', {
          allowNull: false,
          primaryKey: true
     },
-   }
+    quantity: Sequelize.INTEGER
 });
 
 
@@ -18,3 +18,4 @@ const OrderItem = sequelize.define('orderItem', {
 // 11-171: create OrderItem model base
 // 11-171: add id property to OrderItem model
 // 11-171: type, autoIncrement, allowNull & primaryKey properties to id property
+// 11-171: add quantity property to OrderItem model
