@@ -12,6 +12,8 @@ const OrderItem = sequelize.define('orderItem', {
     quantity: Sequelize.INTEGER
 });
 
+module.exports = OrderItem;
+
 
 // progress:
 // 11-171: import Sequelize and sequelize @models/order-item
@@ -19,3 +21,4 @@ const OrderItem = sequelize.define('orderItem', {
 // 11-171: add id property to OrderItem model
 // 11-171: type, autoIncrement, allowNull & primaryKey properties to id property
 // 11-171: add quantity property to OrderItem model
+// 11-171: export OrderItem model
