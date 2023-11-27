@@ -23,6 +23,7 @@ app.set('views', 'views');
 // import all routes folder
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+const { or } = require('sequelize');
 
 
 // install npm install --save body-parser for parsing
@@ -54,6 +55,7 @@ User.hasOne(Cart);
 Cart.belongsTo(User);
 Cart.belongsToMany(Product, { through: CartItem });
 Product.belongsToMany(Cart, { through: CartItem });
+Order.belongsTo(User);
 
 sequelize
   // .sync({ force: true })
