@@ -121,7 +121,12 @@ exports.postCartDeleteProduct = (req, res, next) => {
 };
 
 exports.postOrder = (req, res, next) => {
-
+  req.user
+  .getCart()
+  .then(cart => {
+    
+  })
+  .catch(err => console.log(err));
 };
 
 exports.getOrders = (req, res, next) => {
@@ -138,45 +143,6 @@ exports.getCheckout = (req, res, next) => {
   });
 };
 
-// s11-167: req.user.getCart() is a sequelize method
-// s11-167: Add then() and catch() to getCart() method
-// s11-167: pass in cart @ then() method for getCart() method
-// s11-167: Add return cart.getProducts() to getCart() method
-// s11-167: Add then() return  @getCart() method
-// s11-167: Add catch() return  @getCart() method
-// s11-167: Add products to then() method @getCart() method
-// s11-167: Add res.render() to then() method @getCart() method
-// s11-167: Add path to res.render() @getCart() method
-// s11-167: Add pageTitle to res.render() @getCart() method
-// s11-167: Add products to res.render() @getCart() method
-// s11-167: Add req.user.getCart() @exports.postCart
-// s11-167: Add then() and catch() to req.user.getCart() @exports.postCart
-// s11-167: pass in cart to then method @exports.postCart
-// s11-167: Add return with where clause to then method @exports.postCart
-// s11-167: Add then wih passin products@exports.postCart
-// s11-167: add retrive single product from products @exports.postCart
-// s11-167: add product to then method @exports.postCart
-// s11-168: add if statement to then method @exports.postCart
-// s11-168: add newQuantity var with default value of 1 @exports.postCart
-// s11-168: add if product is anything but undefined @exports.postCart
-// s11-168: add return to call product @exports.postCart
-// s11-168: pass in productid to findById method @exports.postCart
-// s11-168: add then() and catch() to return findById method @exports.postCart
-// s11-168: add define fetchedCart var @exports.postCart
-// s11-168: pass in fetchedCart to store the cart in fetchedCart @exports.postCart
-// s11-168: add return @exports.postCart>req.user>return>then
-// s11-168: fix code with addProduct method @exports.postCart>req.user>return>then
-// s11-168: add through object with quantity property @exports.postCart>req.user>return>then
-// s11-168: add then with res redirect cart @exports.postCart>req.user>then
-// s11-170: add req.user.getCart() @exports.postCartDeleteProduct
-// s11-170: add then and catch to req.user @exports.postCartDeleteProduct
-// s11-170: pass in cart to then method @exports.postCartDeleteProduct
-// s11-170: add return cart.getProducts to then method @exports.postCartDeleteProduct
-// s11-170: pass in where clause for matching id with prodId @exports.postCartDeleteProduct
-// s11-170: add then with passin products @exports.postCartDeleteProduct
-// s11-170: add product for extracting first index products array @exports.postCartDeleteProduct
-// s11-170: add destroy for product only cartItem @exports.postCartDeleteProduct
-// s11-170: add then with passin result @exports.postCartDeleteProduct
-// s11-170: move res.redirect to then result @exports.postCartDeleteProduct
-// s11-170: remove productfindById & deleteProduct @exports.postCartDeleteProduct
+
 // s11-172: create export.postOrder
+// s11-172: Add base req.user.getCart() to get all the cart items and move them into an order
