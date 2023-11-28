@@ -120,6 +120,10 @@ exports.postCartDeleteProduct = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
+exports.postOrder = (req, res, next) => {
+
+};
+
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', {
     path: '/orders',
@@ -175,3 +179,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-170: add then with passin result @exports.postCartDeleteProduct
 // s11-170: move res.redirect to then result @exports.postCartDeleteProduct
 // s11-170: remove productfindById & deleteProduct @exports.postCartDeleteProduct
+// s11-170: create export.postOrder
