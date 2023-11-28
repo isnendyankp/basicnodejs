@@ -179,4 +179,4 @@ exports.getCheckout = (req, res, next) => {
 // s11-170: add then with passin result @exports.postCartDeleteProduct
 // s11-170: move res.redirect to then result @exports.postCartDeleteProduct
 // s11-170: remove productfindById & deleteProduct @exports.postCartDeleteProduct
-// s11-170: create export.postOrder
+// s11-172: create export.postOrder

@@ -18,6 +18,8 @@ router.post('/cart', shopController.postCart);
 
 router.post('/cart-delete-item', shopController.postCartDeleteProduct);
 
+router.post('/create-order', shopController.postOrder);
+
 router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
@@ -48,3 +50,4 @@ module.exports = router;
 // - cr8 route post for postCart controller function
 // - s9-131:Setup route for delete item 
 // - s9-131:Add postCartDeleteProduct controller
+// - s11-172: add route for postOrder
