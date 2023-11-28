@@ -124,7 +124,7 @@ exports.postOrder = (req, res, next) => {
   req.user
   .getCart()
   .then(cart => {
-    
+    return cart.getProducts();
   })
   .catch(err => console.log(err));
 };
@@ -146,3 +146,4 @@ exports.getCheckout = (req, res, next) => {
 
 // s11-172: create export.postOrder
 // s11-172: Add base req.user.getCart() to get all the cart items and move them into an order
+// s11-172: Add return to get all the products in the cart
