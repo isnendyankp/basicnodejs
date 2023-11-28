@@ -18,9 +18,12 @@
                         </li>
                     <% }) %>
                 </ul>
-                <form action="/create-order" method="POST">
-                    <button class="btn" type="submit">Order Now!</button>
-                </form>
+                <div class="centered">
+                    <form action="/create-order" method="POST">
+                        <button class="btn" type="submit">Order Now!</button>
+                    </form>
+                </div>
+                
             <% } else { %>
                 <h1>No Products in Cart!</h1>
             <% } %>
@@ -45,3 +48,4 @@
 <!-- s11-168: import cart.css -->
 <!-- s11-172: Add form with action create-order -->
 <!-- s11-172: Add button Order Now with type submit -->
+<!-- s11-172: wrap form with div class centered -->
